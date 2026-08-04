@@ -7,78 +7,77 @@
     <meta name="description" content="A curated collection of speculative brand teardowns, social media audits, and hospitality growth strategies put into practice.">
     <meta name="author" content="Padmaja Senthil">
 
-    <!-- Google Fonts -->
+    <!-- Google Fonts: Newsreader (Serif & Script), Plus Jakarta Sans (Body), Caveat (Script) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,600&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
 
     <style>
         /* ==========================================
-           GLASSMORPHIC DESIGN SYSTEM & INKWELL THEME
+           INKWELL DESIGN SYSTEM & THEME TOKENS
            ========================================== */
         :root {
-            /* Light Glassmorphic Theme */
-            --bg-body: #f8fafc;
-            --bg-surface: rgba(255, 255, 255, 0.75);
-            --bg-surface-solid: #ffffff;
-            --bg-subtle: #f1f5f9;
-            --bg-glass-nav: rgba(248, 250, 252, 0.82);
-            --border-glass: rgba(226, 232, 240, 0.8);
-            --border-glass-accent: rgba(244, 114, 182, 0.3);
+            /* Light Inkwell Theme Palette */
+            --bg-body: #faf7f2;
+            --bg-surface: #ffffff;
+            --bg-subtle: #f4efe6;
+            --bg-card-hover: #eee7db;
+            --bg-dark-section: #141210;
+            --bg-dark-card: #1c1a17;
+
+            --border-light: rgba(28, 25, 23, 0.08);
+            --border-dark: rgba(255, 255, 255, 0.1);
             
-            --text-main: #0f172a;
-            --text-muted: #475569;
-            --text-subtle: #94a3b8;
-            
-            --accent-primary: #e05a36; /* Warm Terracotta / Coral */
-            --accent-primary-hover: #c44a29;
-            --accent-soft: rgba(224, 90, 54, 0.1);
-            --accent-teal: #0d9488;
+            --text-main: #1c1917;
+            --text-muted: #6b635b;
+            --text-subtle: #8c827a;
+            --text-on-dark: #faf7f2;
+            --text-muted-on-dark: #a3998e;
+
+            --accent-terracotta: #c85a32;
+            --accent-terracotta-soft: #fdf3ef;
+            --accent-sage: #4e6b5d;
             --accent-amber: #d97706;
 
-            --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-heading: 'Newsreader', Georgia, serif;
             --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-            --font-mono: 'JetBrains Mono', monospace;
+            --font-script: 'Caveat', cursive;
 
-            --shadow-glass-sm: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
-            --shadow-glass-md: 0 12px 32px -4px rgba(15, 23, 42, 0.08);
-            --shadow-glass-lg: 0 24px 48px -12px rgba(15, 23, 42, 0.12);
-            --shadow-glow: 0 0 40px rgba(224, 90, 54, 0.15);
+            --shadow-sm: 0 2px 8px rgba(28, 25, 23, 0.04);
+            --shadow-md: 0 12px 32px -4px rgba(28, 25, 23, 0.06);
+            --shadow-lg: 0 24px 48px -12px rgba(28, 25, 23, 0.1);
 
-            --radius-sm: 12px;
+            --radius-sm: 10px;
             --radius-md: 20px;
             --radius-lg: 32px;
             --radius-full: 9999px;
 
-            --header-height: 72px;
+            --header-height: 76px;
             --container-max: 1240px;
             --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         [data-theme="dark"] {
-            /* Dark Glassmorphic Theme (Inkwell Obsidian) */
-            --bg-body: #0b0f17;
-            --bg-surface: rgba(22, 30, 46, 0.75);
-            --bg-surface-solid: #161e2e;
-            --bg-subtle: #1e293b;
-            --bg-glass-nav: rgba(11, 15, 23, 0.85);
-            --border-glass: rgba(51, 65, 85, 0.7);
-            --border-glass-accent: rgba(244, 114, 182, 0.25);
-            
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --text-subtle: #64748b;
-            
-            --accent-primary: #ff6b4a;
-            --accent-primary-hover: #e55737;
-            --accent-soft: rgba(255, 107, 74, 0.15);
-            --accent-teal: #14b8a6;
-            --accent-amber: #f59e0b;
+            /* Dark Inkwell Theme Palette */
+            --bg-body: #12100e;
+            --bg-surface: #1a1815;
+            --bg-subtle: #24211c;
+            --bg-card-hover: #2e2a24;
+            --bg-dark-section: #0a0908;
+            --bg-dark-card: #141210;
 
-            --shadow-glass-sm: 0 4px 20px -2px rgba(0, 0, 0, 0.4);
-            --shadow-glass-md: 0 12px 32px -4px rgba(0, 0, 0, 0.6);
-            --shadow-glass-lg: 0 24px 48px -12px rgba(0, 0, 0, 0.8);
-            --shadow-glow: 0 0 50px rgba(255, 107, 74, 0.2);
+            --border-light: rgba(255, 255, 255, 0.08);
+            
+            --text-main: #f5f2ec;
+            --text-muted: #a8a096;
+            --text-subtle: #787066;
+
+            --accent-terracotta: #e07a5f;
+            --accent-terracotta-soft: #2c1a14;
+
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 12px 32px -4px rgba(0, 0, 0, 0.5);
+            --shadow-lg: 0 24px 48px -12px rgba(0, 0, 0, 0.7);
         }
 
         /* Base Resets */
@@ -88,63 +87,117 @@
             padding: 0;
         }
 
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: calc(var(--header-height) + 20px);
+        }
+
         body {
             background-color: var(--bg-body);
             color: var(--text-main);
             font-family: var(--font-body);
             font-size: 1rem;
-            line-height: 1.6;
+            line-height: 1.65;
             -webkit-font-smoothing: antialiased;
-            transition: background-color 0.4s ease, color 0.4s ease;
+            transition: background-color 0.3s ease, color 0.3s ease;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             overflow-x: hidden;
         }
 
-        /* Ambient Glow Background Orbs */
-        .ambient-glow-1 {
-            position: fixed;
-            top: -120px;
-            right: -100px;
-            width: 500px;
-            height: 500px;
-            border-radius: 50%;
-            background: radial-gradient(circle, var(--accent-soft) 0%, rgba(0,0,0,0) 70%);
-            pointer-events: none;
-            z-index: 0;
+        /* Inkwell Script Label Tag */
+        .script-tag {
+            font-family: var(--font-script);
+            font-size: 1.25rem;
+            color: var(--accent-terracotta);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
         }
 
-        .ambient-glow-2 {
-            position: fixed;
-            bottom: 10%;
-            left: -150px;
-            width: 600px;
-            height: 600px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(13, 148, 136, 0.08) 0%, rgba(0,0,0,0) 70%);
-            pointer-events: none;
-            z-index: 0;
+        .script-tag::before {
+            content: '';
+            display: inline-block;
+            width: 24px;
+            height: 1.5px;
+            background-color: var(--accent-terracotta);
+        }
+
+        /* Highlighted Serif Word */
+        .serif-italic {
+            font-style: italic;
+            color: var(--accent-terracotta);
+            font-weight: 500;
+        }
+
+        /* Buttons */
+        .btn-ink-primary {
+            background-color: var(--text-main);
+            color: var(--bg-body);
+            padding: 12px 28px;
+            border-radius: var(--radius-full);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .btn-ink-primary:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-ink-secondary {
+            background-color: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--border-light);
+            padding: 12px 28px;
+            border-radius: var(--radius-full);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .btn-ink-secondary:hover {
+            border-color: var(--text-main);
+            transform: translateY(-2px);
         }
 
         /* ==========================================
-           TOP GLASSMORPHIC NAVIGATION BAR
+           TOP DYNAMIC NAVIGATION BAR
            ========================================== */
-        .top-navbar {
+        .ink-header {
             position: sticky;
             top: 0;
             height: var(--header-height);
-            background: var(--bg-glass-nav);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border-bottom: 1px solid var(--border-glass);
+            background-color: rgba(250, 247, 242, 0.92);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-light);
             z-index: 1000;
             display: flex;
             align-items: center;
             transition: var(--transition-smooth);
         }
 
-        .navbar-inner {
+        [data-theme="dark"] .ink-header {
+            background-color: rgba(18, 16, 14, 0.92);
+        }
+
+        .ink-header-inner {
             width: 100%;
             max-width: var(--container-max);
             margin: 0 auto;
@@ -152,887 +205,1158 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 20px;
         }
 
-        .brand-logo-group {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            text-decoration: none;
-            color: var(--text-main);
-        }
-
-        .brand-avatar-mini {
-            width: 42px;
-            height: 42px;
-            border-radius: var(--radius-full);
-            background: linear-gradient(135deg, var(--accent-primary), #ff8f70);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #ffffff;
-            font-family: var(--font-heading);
-            font-weight: 800;
-            font-size: 1.1rem;
-            box-shadow: 0 4px 12px var(--accent-soft);
-        }
-
-        .brand-text-wrapper {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .brand-site-title {
-            font-family: var(--font-heading);
-            font-size: 1.25rem;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            line-height: 1.2;
-            color: var(--text-main);
-        }
-
-        .brand-site-subtitle {
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--accent-primary);
-        }
-
-        /* Nav Links */
-        .nav-links-center {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-        }
-
-        .top-nav-link {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.95rem;
-            padding: 6px 14px;
-            border-radius: var(--radius-full);
-            transition: var(--transition-smooth);
-        }
-
-        .top-nav-link:hover, .top-nav-link.active {
-            color: var(--accent-primary);
-            background: var(--accent-soft);
-        }
-
-        /* Right Actions Bar (Social + Theme Toggle) */
-        .navbar-actions {
+        .brand-logo-link {
             display: flex;
             align-items: center;
             gap: 12px;
+            text-decoration: none;
+            color: var(--text-main);
         }
 
-        .social-links-bar {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .social-glass-btn {
+        .logo-icon-box {
             width: 38px;
             height: 38px;
-            border-radius: var(--radius-full);
-            background: var(--bg-surface);
-            border: 1px solid var(--border-glass);
+            border-radius: 10px;
+            background-color: var(--text-main);
+            color: var(--bg-body);
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .brand-text-main {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .brand-text-accent {
+            color: var(--accent-terracotta);
+        }
+
+        /* Header Nav Items */
+        .ink-nav-list {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .ink-nav-link {
             color: var(--text-muted);
             text-decoration: none;
-            transition: var(--transition-smooth);
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: color 0.2s ease;
         }
 
-        .social-glass-btn:hover {
-            color: var(--accent-primary);
-            border-color: var(--accent-primary);
-            transform: translateY(-2px);
-            box-shadow: var(--shadow-glass-sm);
+        .ink-nav-link:hover, .ink-nav-link.active {
+            color: var(--accent-terracotta);
         }
 
-        .theme-toggle-glass {
-            background: var(--bg-surface);
-            border: 1px solid var(--border-glass);
+        .header-actions-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .theme-btn-ink {
+            background: var(--bg-subtle);
+            border: 1px solid var(--border-light);
             color: var(--text-main);
-            padding: 8px 16px;
+            padding: 8px 14px;
             border-radius: var(--radius-full);
             cursor: pointer;
             font-size: 0.85rem;
-            font-weight: 700;
+            font-weight: 600;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
             transition: var(--transition-smooth);
         }
 
-        .theme-toggle-glass:hover {
-            border-color: var(--accent-primary);
-            color: var(--accent-primary);
-            transform: translateY(-1px);
+        .theme-btn-ink:hover {
+            background: var(--bg-card-hover);
         }
 
-        /* Mobile Hamburger Toggle */
-        .mobile-hamburger-btn {
+        .mobile-toggle-ink {
             display: none;
-            width: 40px;
-            height: 40px;
-            border-radius: var(--radius-sm);
-            background: var(--bg-surface);
-            border: 1px solid var(--border-glass);
+            background: var(--bg-subtle);
+            border: 1px solid var(--border-light);
             color: var(--text-main);
+            width: 42px;
+            height: 42px;
+            border-radius: var(--radius-sm);
             cursor: pointer;
             align-items: center;
             justify-content: center;
         }
 
         /* ==========================================
-           MAIN CONTENT LAYOUT
+           MAIN CONTENT AREA & HERO SECTION
            ========================================== */
-        .main-wrapper {
+        .main-container {
             width: 100%;
             max-width: var(--container-max);
             margin: 0 auto;
             padding: 48px 24px 80px;
             flex: 1;
-            position: relative;
-            z-index: 1;
         }
 
-        /* Inkwell Style Glass Hero Banner */
-        .hero-banner-glass {
-            background: var(--bg-surface);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid var(--border-glass);
-            border-radius: var(--radius-lg);
-            padding: 56px 48px;
-            margin-bottom: 48px;
-            box-shadow: var(--shadow-glass-md);
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .hero-banner-glass::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(90deg, var(--accent-primary), var(--accent-teal), var(--accent-amber));
-        }
-
-        .hero-badge-group {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .glass-pill-badge {
-            font-size: 0.78rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--accent-primary);
-            background: var(--accent-soft);
-            padding: 6px 14px;
-            border-radius: var(--radius-full);
-            border: 1px solid rgba(224, 90, 54, 0.2);
-        }
-
-        .hero-title-main {
-            font-family: var(--font-heading);
-            font-size: clamp(2.5rem, 4.5vw, 3.8rem);
-            font-weight: 800;
-            line-height: 1.15;
-            letter-spacing: -0.03em;
-            color: var(--text-main);
-        }
-
-        .hero-description-main {
-            font-size: 1.15rem;
-            color: var(--text-muted);
-            max-width: 820px;
-            line-height: 1.65;
-        }
-
-        /* Filter & Controls Bar */
-        .controls-glass-bar {
-            background: var(--bg-surface);
-            backdrop-filter: blur(12px);
-            border: 1px solid var(--border-glass);
-            border-radius: var(--radius-md);
-            padding: 18px 24px;
-            margin-bottom: 40px;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-            box-shadow: var(--shadow-glass-sm);
-        }
-
-        .search-glass-box {
-            position: relative;
-            flex: 1;
-            min-width: 260px;
-            max-width: 440px;
-        }
-
-        .search-glass-input {
-            width: 100%;
-            padding: 12px 18px 12px 46px;
-            border-radius: var(--radius-full);
-            background: var(--bg-subtle);
-            border: 1px solid var(--border-glass);
-            color: var(--text-main);
-            font-family: var(--font-body);
-            font-size: 0.95rem;
-            outline: none;
-            transition: var(--transition-smooth);
-        }
-
-        .search-glass-input:focus {
-            border-color: var(--accent-primary);
-            box-shadow: 0 0 0 3px var(--accent-soft);
-            background: var(--bg-surface-solid);
-        }
-
-        .search-glass-icon {
-            position: absolute;
-            left: 18px;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--text-subtle);
-            pointer-events: none;
-        }
-
-        .filter-glass-pills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .filter-glass-btn {
-            padding: 8px 20px;
-            border-radius: var(--radius-full);
-            background: var(--bg-subtle);
-            border: 1px solid var(--border-glass);
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: var(--transition-smooth);
-        }
-
-        .filter-glass-btn:hover {
-            color: var(--accent-primary);
-            border-color: var(--accent-primary);
-        }
-
-        .filter-glass-btn.active {
-            background: var(--accent-primary);
-            color: #ffffff;
-            border-color: var(--accent-primary);
-            box-shadow: 0 4px 14px var(--accent-soft);
-        }
-
-        /* Featured Article Card */
-        .featured-glass-card {
-            background: var(--bg-surface);
-            backdrop-filter: blur(16px);
-            border: 1px solid var(--border-glass);
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            margin-bottom: 56px;
+        .hero-section-ink {
             display: grid;
             grid-template-columns: 1fr;
-            text-decoration: none;
-            color: inherit;
-            box-shadow: var(--shadow-glass-md);
-            transition: var(--transition-smooth);
+            gap: 48px;
+            align-items: center;
+            margin-bottom: 72px;
         }
 
         @media (min-width: 900px) {
-            .featured-glass-card {
-                grid-template-columns: 1.2fr 1fr;
+            .hero-section-ink {
+                grid-template-columns: 1.15fr 1fr;
             }
         }
 
-        .featured-glass-card:hover {
-            box-shadow: var(--shadow-glass-lg), var(--shadow-glow);
-            transform: translateY(-4px);
-            border-color: var(--border-glass-accent);
-        }
-
-        .featured-img-wrap {
-            position: relative;
-            min-height: 300px;
-            background: var(--bg-subtle);
-            overflow: hidden;
-        }
-
-        .featured-img-element {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s ease;
-        }
-
-        .featured-glass-card:hover .featured-img-element {
-            transform: scale(1.05);
-        }
-
-        .featured-content-inner {
-            padding: 40px;
+        .hero-left-content {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            gap: 20px;
         }
 
-        .article-tags-row {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 14px;
-            flex-wrap: wrap;
-        }
-
-        .tag-glass {
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            color: var(--accent-primary);
-            background: var(--accent-soft);
-            padding: 4px 12px;
-            border-radius: var(--radius-full);
-        }
-
-        .featured-card-heading {
+        .hero-headline {
             font-family: var(--font-heading);
-            font-size: clamp(1.6rem, 2.5vw, 2rem);
+            font-size: clamp(2.4rem, 5vw, 3.8rem);
             font-weight: 700;
-            line-height: 1.25;
+            line-height: 1.12;
+            letter-spacing: -0.025em;
             color: var(--text-main);
-            margin-bottom: 14px;
-            letter-spacing: -0.02em;
         }
 
-        .featured-card-excerpt {
-            font-size: 0.98rem;
+        .hero-subtext {
+            font-size: 1.1rem;
             color: var(--text-muted);
-            line-height: 1.6;
-            margin-bottom: 24px;
+            line-height: 1.65;
+            max-width: 560px;
         }
 
-        .article-meta-row {
+        .hero-cta-group {
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-size: 0.85rem;
-            color: var(--text-subtle);
-            font-weight: 600;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-top: 8px;
         }
 
-        /* Articles Grid */
-        .section-header-title {
+        /* Hero Graphic Right (Inkwell Desk Container) */
+        .hero-graphic-right {
+            position: relative;
+            background-color: #f4ede2;
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: var(--shadow-md);
+            overflow: visible;
+        }
+
+        [data-theme="dark"] .hero-graphic-right {
+            background-color: #24201b;
+        }
+
+        .hero-illustration-img {
+            width: 100%;
+            height: auto;
+            max-height: 380px;
+            object-fit: contain;
+            border-radius: var(--radius-md);
+        }
+
+        /* Floating Cards on Hero Graphic */
+        .floating-card-top {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--bg-surface);
+            padding: 12px 18px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            border: 1px solid var(--border-light);
+            animation: floatBob 3.5s ease-in-out infinite;
+        }
+
+        .floating-card-bottom {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: var(--bg-surface);
+            padding: 12px 18px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-md);
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            border: 1px solid var(--border-light);
+            max-width: 240px;
+            animation: floatBob 4s ease-in-out infinite 0.6s;
+        }
+
+        @keyframes floatBob {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-6px); }
+        }
+
+        /* ==========================================
+           FEATURED STORIES SECTION (IMAGE 3)
+           ========================================== */
+        .section-header-row {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .section-title-ink {
             font-family: var(--font-heading);
-            font-size: 1.8rem;
+            font-size: clamp(1.8rem, 3.5vw, 2.5rem);
             font-weight: 700;
             color: var(--text-main);
-            margin-bottom: 28px;
-            letter-spacing: -0.02em;
+            line-height: 1.2;
         }
 
-        .articles-grid-layout {
+        .featured-grid-ink {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            gap: 32px;
-            margin-bottom: 64px;
+            grid-template-columns: 1fr;
+            gap: 28px;
+            margin-bottom: 72px;
         }
 
-        .article-glass-card {
-            background: var(--bg-surface);
-            backdrop-filter: blur(12px);
-            border: 1px solid var(--border-glass);
-            border-radius: var(--radius-md);
+        @media (min-width: 860px) {
+            .featured-grid-ink {
+                grid-template-columns: 1.1fr 1fr;
+            }
+        }
+
+        /* Tall Main Feature Card */
+        .card-featured-tall {
+            background-color: var(--bg-surface);
+            border-radius: var(--radius-lg);
             overflow: hidden;
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-sm);
             display: flex;
             flex-direction: column;
             text-decoration: none;
             color: inherit;
-            box-shadow: var(--shadow-glass-sm);
             transition: var(--transition-smooth);
         }
 
-        .article-glass-card:hover {
-            box-shadow: var(--shadow-glass-md);
-            transform: translateY(-5px);
-            border-color: var(--border-glass-accent);
+        .card-featured-tall:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
         }
 
-        .card-img-container {
-            height: 200px;
-            background: var(--bg-subtle);
+        .card-tall-img-wrap {
+            height: 280px;
+            background-color: var(--bg-subtle);
             overflow: hidden;
-            position: relative;
         }
 
-        .card-img-element {
+        .card-tall-img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s ease;
         }
 
-        .article-glass-card:hover .card-img-element {
-            transform: scale(1.06);
+        .card-featured-tall:hover .card-tall-img {
+            transform: scale(1.04);
         }
 
-        .card-body-inner {
+        .card-tall-body {
+            padding: 32px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-meta-line {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.85rem;
+            color: var(--text-subtle);
+            margin-bottom: 12px;
+        }
+
+        .card-title-tall {
+            font-family: var(--font-heading);
+            font-size: 1.7rem;
+            font-weight: 700;
+            line-height: 1.25;
+            color: var(--text-main);
+            margin-bottom: 12px;
+        }
+
+        .card-desc-tall {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 24px;
+            flex: 1;
+        }
+
+        .card-author-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 16px;
+            border-top: 1px solid var(--border-light);
+        }
+
+        .read-more-link {
+            font-weight: 700;
+            color: var(--accent-terracotta);
+            font-size: 0.9rem;
+        }
+
+        /* Right Side Stacked Cards */
+        .featured-right-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+
+        .card-featured-stacked {
+            background-color: var(--bg-surface);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-smooth);
+        }
+
+        .card-featured-stacked:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .card-stacked-img-wrap {
+            height: 180px;
+            background-color: var(--bg-subtle);
+            overflow: hidden;
+        }
+
+        .card-stacked-body {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title-stacked {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 700;
+            line-height: 1.3;
+            color: var(--text-main);
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+
+        /* ==========================================
+           FROM THE ARCHIVES GRID (IMAGE 2)
+           ========================================== */
+        .archives-grid-ink {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 28px;
+            margin-bottom: 80px;
+        }
+
+        .card-archive-ink {
+            background-color: var(--bg-surface);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            border: 1px solid var(--border-light);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition-smooth);
+        }
+
+        .card-archive-ink:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .archive-img-wrap {
+            height: 180px;
+            background-color: #f4ede2;
+            overflow: hidden;
+            position: relative;
+        }
+
+        [data-theme="dark"] .archive-img-wrap {
+            background-color: #24201b;
+        }
+
+        .archive-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .card-archive-ink:hover .archive-img {
+            transform: scale(1.05);
+        }
+
+        .archive-body {
             padding: 24px;
             flex: 1;
             display: flex;
             flex-direction: column;
         }
 
-        .card-heading-title {
+        .archive-category-script {
+            font-family: var(--font-script);
+            font-size: 1.15rem;
+            color: var(--accent-terracotta);
+            margin-bottom: 6px;
+        }
+
+        .archive-title {
             font-family: var(--font-heading);
-            font-size: 1.35rem;
+            font-size: 1.25rem;
             font-weight: 700;
             line-height: 1.3;
             color: var(--text-main);
-            margin-top: 10px;
-            margin-bottom: 12px;
-        }
-
-        .card-text-desc {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            line-height: 1.6;
-            margin-bottom: 20px;
+            margin-bottom: 16px;
             flex: 1;
         }
 
-        .status-badge-glass {
-            font-size: 0.75rem;
-            font-weight: 700;
-            color: var(--accent-amber);
-            background: rgba(217, 119, 6, 0.12);
-            padding: 4px 12px;
-            border-radius: var(--radius-full);
-            display: inline-block;
+        .archive-footer-meta {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 0.825rem;
+            color: var(--text-subtle);
         }
 
         /* ==========================================
-           ABOUT ME SECTION WITH CLIP-ART ANIMATION
+           ABOUT ME SECTION (IMAGE 4)
            ========================================== */
-        .about-glass-section {
-            background: var(--bg-surface);
-            backdrop-filter: blur(16px);
-            border: 1px solid var(--border-glass);
+        .about-section-ink {
+            background-color: var(--bg-subtle);
             border-radius: var(--radius-lg);
-            padding: 48px;
-            margin-bottom: 64px;
-            box-shadow: var(--shadow-glass-md);
+            padding: 48px 40px;
+            margin-bottom: 80px;
             display: grid;
             grid-template-columns: 1fr;
-            gap: 40px;
+            gap: 48px;
             align-items: center;
+            border: 1px solid var(--border-light);
         }
 
         @media (min-width: 860px) {
-            .about-glass-section {
-                grid-template-columns: 1.3fr 1fr;
+            .about-section-ink {
+                grid-template-columns: 1fr 1.3fr;
             }
         }
 
-        .about-content-left {
+        .about-avatar-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .about-avatar-card {
+            width: 100%;
+            max-width: 360px;
+            height: 380px;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            background-color: #e8ded1;
+            box-shadow: var(--shadow-md);
+            position: relative;
+        }
+
+        [data-theme="dark"] .about-avatar-card {
+            background-color: #2a251f;
+        }
+
+        .about-avatar-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-experience-badge {
+            position: absolute;
+            bottom: -15px;
+            right: 15px;
+            background-color: var(--bg-dark-section);
+            color: var(--text-on-dark);
+            padding: 12px 20px;
+            border-radius: 14px;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+        }
+
+        .exp-number {
+            font-family: var(--font-heading);
+            font-size: 1.4rem;
+            font-weight: 800;
+            line-height: 1;
+
+        }
+
+        .exp-label {
+            font-size: 0.72rem;
+            color: var(--text-muted-on-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .about-right-text {
             display: flex;
             flex-direction: column;
             gap: 18px;
         }
 
-        .about-main-heading {
+        .about-heading-ink {
             font-family: var(--font-heading);
-            font-size: 2.2rem;
-            font-weight: 800;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            line-height: 1.15;
             color: var(--text-main);
             letter-spacing: -0.02em;
         }
 
-        .about-paragraph {
+        .about-paragraph-ink {
             font-size: 1rem;
             color: var(--text-muted);
             line-height: 1.7;
         }
 
-        /* Clip-path Art Frame & Micro-animations */
-        .about-clipart-wrapper {
+        .pill-tags-grid {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 6px;
         }
 
-        .clipart-frame {
-            width: 240px;
-            height: 240px;
-            border-radius: var(--radius-lg);
-            background: var(--bg-surface-solid);
-            border: 1px solid var(--border-glass);
-            box-shadow: var(--shadow-glass-lg);
-            padding: 12px;
-            position: relative;
-            overflow: hidden;
-            transform: rotate(-2deg);
+        .ink-pill-tag {
+            background-color: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            color: var(--text-main);
+            padding: 8px 16px;
+            border-radius: var(--radius-full);
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .social-round-btns {
+            display: flex;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .round-icon-btn {
+            width: 44px;
+            height: 44px;
+            border-radius: var(--radius-full);
+            background-color: var(--bg-surface);
+            border: 1px solid var(--border-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-main);
+            text-decoration: none;
             transition: var(--transition-smooth);
         }
 
-        .clipart-frame:hover {
-            transform: rotate(0deg) scale(1.03);
-            box-shadow: var(--shadow-glow);
+        .round-icon-btn:hover {
+            background-color: var(--accent-terracotta);
+            color: #ffffff;
+            border-color: var(--accent-terracotta);
+            transform: translateY(-2px);
         }
 
-        .clipart-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: var(--radius-md);
-            clip-path: polygon(0 0, 100% 0, 100% 88%, 88% 100%, 0 100%);
-        }
-
-        /* Animated Floating Micro-elements */
-        .floating-badge-1 {
-            position: absolute;
-            top: -10px;
-            right: 10px;
-            background: var(--bg-surface-solid);
-            border: 1px solid var(--border-glass);
-            padding: 8px 14px;
-            border-radius: var(--radius-full);
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: var(--accent-primary);
-            box-shadow: var(--shadow-glass-sm);
-            animation: floatBob 3.5s ease-in-out infinite;
-        }
-
-        .floating-badge-2 {
-            position: absolute;
-            bottom: -10px;
-            left: 10px;
-            background: var(--bg-surface-solid);
-            border: 1px solid var(--border-glass);
-            padding: 8px 14px;
-            border-radius: var(--radius-full);
-            font-size: 0.8rem;
-            font-weight: 700;
-            color: var(--accent-teal);
-            box-shadow: var(--shadow-glass-sm);
-            animation: floatBob 4s ease-in-out infinite 0.8s;
-        }
-
-        @keyframes floatBob {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-8px); }
-        }
-
-        /* Footer */
-        .site-footer-glass {
-            background: var(--bg-surface);
-            backdrop-filter: blur(12px);
-            border: 1px solid var(--border-glass);
-            border-radius: var(--radius-md);
-            padding: 36px 24px;
+        /* ==========================================
+           NEWSLETTER STAY CONNECTED BANNER (IMAGE 1)
+           ========================================== */
+        .newsletter-banner-dark {
+            background-color: var(--bg-dark-section);
+            color: var(--text-on-dark);
+            border-radius: var(--radius-lg);
+            padding: 64px 32px;
             text-align: center;
-            color: var(--text-subtle);
-            font-size: 0.9rem;
+            margin-bottom: 80px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 16px;
+            gap: 18px;
+            box-shadow: var(--shadow-lg);
         }
 
-        .footer-social-grid {
-            display: flex;
-            gap: 12px;
-            justify-content: center;
-        }
-
-        .vercel-glass-pill {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 6px 16px;
-            border-radius: var(--radius-full);
-            background: var(--bg-subtle);
-            border: 1px solid var(--border-glass);
-            font-size: 0.78rem;
+        .newsletter-heading-dark {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 4.5vw, 3.2rem);
             font-weight: 700;
-            color: var(--text-main);
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            max-width: 680px;
         }
 
-        /* Responsive Breakpoints */
+        .newsletter-desc-dark {
+            font-size: 1.05rem;
+            color: var(--text-muted-on-dark);
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .newsletter-form-box {
+            display: flex;
+            align-items: center;
+            background-color: var(--bg-dark-card);
+            border: 1px solid var(--border-dark);
+            padding: 6px 6px 6px 20px;
+            border-radius: var(--radius-full);
+            width: 100%;
+            max-width: 520px;
+            margin-top: 12px;
+        }
+
+        .newsletter-input-dark {
+            background: transparent;
+            border: none;
+            color: var(--text-on-dark);
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            flex: 1;
+            outline: none;
+        }
+
+        .newsletter-btn-orange {
+            background-color: var(--accent-terracotta);
+            color: #ffffff;
+            border: none;
+            padding: 12px 24px;
+            border-radius: var(--radius-full);
+            font-weight: 700;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+        }
+
+        .newsletter-btn-orange:hover {
+            opacity: 0.9;
+            transform: scale(1.02);
+        }
+
+        /* ==========================================
+           FOOTER (IMAGE 1)
+           ========================================== */
+        .ink-footer-dark {
+            background-color: var(--bg-dark-section);
+            color: var(--text-on-dark);
+            padding: 64px 24px 36px;
+            margin-top: auto;
+            border-top: 1px solid var(--border-dark);
+        }
+
+        .footer-inner-max {
+            max-width: var(--container-max);
+            margin: 0 auto;
+        }
+
+        .footer-grid-4col {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 56px;
+        }
+
+        .footer-col-title {
+            font-size: 0.78rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-muted-on-dark);
+            margin-bottom: 20px;
+        }
+
+        .footer-link-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-link-item {
+            color: var(--text-on-dark);
+            text-decoration: none;
+            font-size: 0.9375rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-link-item:hover {
+            color: var(--accent-terracotta);
+        }
+
+        .footer-bottom-bar {
+            padding-top: 28px;
+            border-top: 1px solid var(--border-dark);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 0.85rem;
+            color: var(--text-muted-on-dark);
+        }
+
+        .footer-social-pills {
+            display: flex;
+            gap: 10px;
+        }
+
+        .footer-social-pill {
+            width: 36px;
+            height: 36px;
+            border-radius: var(--radius-full);
+            background-color: var(--bg-dark-card);
+            border: 1px solid var(--border-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-on-dark);
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 700;
+            transition: var(--transition-smooth);
+        }
+
+        .footer-social-pill:hover {
+            background-color: var(--accent-terracotta);
+            border-color: var(--accent-terracotta);
+        }
+
+        /* ==========================================
+           MOBILE RESPONSIVENESS & DYNAMIC DRILLDOWN
+           ========================================== */
         @media (max-width: 860px) {
-            .nav-links-center {
+            .ink-nav-list {
                 display: none;
             }
-            .nav-links-center.open {
+
+            .ink-nav-list.mobile-open {
                 display: flex;
+                flex-direction: column;
                 position: absolute;
                 top: var(--header-height);
                 left: 0;
                 right: 0;
-                background: var(--bg-glass-nav);
-                backdrop-filter: blur(20px);
-                flex-direction: column;
+                background-color: var(--bg-body);
+                border-bottom: 1px solid var(--border-light);
                 padding: 24px;
-                border-bottom: 1px solid var(--border-glass);
-                gap: 16px;
+                gap: 18px;
+                box-shadow: var(--shadow-lg);
             }
-            .mobile-hamburger-btn {
+
+            .mobile-toggle-ink {
                 display: flex;
             }
-            .main-wrapper {
+
+            .main-container {
                 padding: 32px 16px 60px;
             }
-            .hero-banner-glass {
-                padding: 36px 24px;
+
+            .hero-section-ink {
+                gap: 36px;
+            }
+
+            .about-section-ink {
+                padding: 32px 20px;
+            }
+
+            .newsletter-banner-dark {
+                padding: 40px 20px;
+            }
+
+            .newsletter-form-box {
+                flex-direction: column;
+                border-radius: var(--radius-md);
+                padding: 12px;
+                gap: 12px;
+            }
+
+            .newsletter-btn-orange {
+                width: 100%;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Ambient Glow Background Effects -->
-    <div class="ambient-glow-1"></div>
-    <div class="ambient-glow-2"></div>
-
-    <!-- TOP GLASSMORPHIC NAVIGATION BAR -->
-    <header class="top-navbar">
-        <div class="navbar-inner">
-            <!-- Brand Logo & Title -->
-            <a href="index.html" class="brand-logo-group">
-                <div class="brand-avatar-mini">P</div>
-                <div class="brand-text-wrapper">
-                    <span class="brand-site-title">My Digital Marketing Journey</span>
-                    <span class="brand-site-subtitle">Case Study Series</span>
-                </div>
+    <!-- TOP DYNAMIC NAVIGATION BAR -->
+    <header class="ink-header">
+        <div class="ink-header-inner">
+            <!-- Brand Logo -->
+            <a href="index.html" class="brand-logo-link">
+                <div class="logo-icon-box">✏️</div>
+                <span class="brand-text-main">Ink<span class="brand-text-accent">well</span></span>
             </a>
 
-            <!-- Navigation Links (Center) -->
-            <nav class="nav-links-center" id="nav-links-menu">
-                <a href="index.html" class="top-nav-link active">Home</a>
-                <a href="#case-studies" class="top-nav-link">Case Studies</a>
-                <a href="#about-me" class="top-nav-link">About Me</a>
-            </nav>
+            <!-- Navigation Links -->
+            <ul class="ink-nav-list" id="ink-nav-menu">
+                <li><a href="index.html" class="ink-nav-link active">Home</a></li>
+                <li><a href="#about-me" class="ink-nav-link">About</a></li>
+                <li><a href="#featured" class="ink-nav-link">Case Studies</a></li>
+                <li><a href="#archives" class="ink-nav-link">Categories</a></li>
+                <li><a href="#newsletter" class="ink-nav-link">Contact</a></li>
+            </ul>
 
-            <!-- Actions Right (Social Links & Theme Switcher) -->
-            <div class="navbar-actions">
-                <div class="social-links-bar">
-                    <a href="https://instagram.com" target="_blank" rel="noopener" class="social-glass-btn" aria-label="Instagram">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                    </a>
-                    <a href="https://facebook.com" target="_blank" rel="noopener" class="social-glass-btn" aria-label="Facebook">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-                    </a>
-                    <a href="https://x.com" target="_blank" rel="noopener" class="social-glass-btn" aria-label="X (Twitter)">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                    </a>
-                    <a href="https://github.com/padmajasenthil04/blog-post" target="_blank" rel="noopener" class="social-glass-btn" aria-label="GitHub Repository">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                    </a>
-                </div>
-
-                <!-- Dark/Light Theme Switcher Button -->
-                <button class="theme-toggle-glass" id="theme-toggle" aria-label="Toggle Theme">
+            <!-- Header Actions Right -->
+            <div class="header-actions-right">
+                <a href="#about-me" class="btn-ink-primary" style="display: none; @media (min-width: 640px) { display: inline-flex; }">Contact Me</a>
+                
+                <button class="theme-btn-ink" id="theme-toggle" aria-label="Toggle Theme">
                     <svg class="sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line></svg>
-                    <span id="theme-text">Dark Mode</span>
+                    <span id="theme-text">Dark</span>
                 </button>
 
-                <!-- Mobile Hamburger Toggle -->
-                <button class="mobile-hamburger-btn" id="mobile-hamburger" aria-label="Toggle Mobile Navigation">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                <button class="mobile-toggle-ink" id="mobile-toggle-btn" aria-label="Toggle Mobile Navigation">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
                 </button>
             </div>
         </div>
     </header>
 
     <!-- MAIN CONTAINER -->
-    <main class="main-wrapper">
+    <main class="main-container">
 
-        <!-- Inkwell Style Glass Hero Section -->
-        <section class="hero-banner-glass">
-            <div class="hero-badge-group">
-                <span class="glass-pill-badge">Case Study Series</span>
-                <span class="tag-glass" style="background: var(--bg-subtle); color: var(--text-muted);">Daily Updates</span>
+        <!-- HERO SECTION (IMAGE 5) -->
+        <section class="hero-section-ink">
+            <div class="hero-left-content">
+                <span class="script-tag">Welcome to my case study series</span>
+                <h1 class="hero-headline">
+                    My Digital Marketing <span class="serif-italic">Journey</span>
+                </h1>
+                <p class="hero-subtext">
+                    A space for curious minds — where real-world brand teardowns, social media audits, and hospitality growth strategies are put into practice daily.
+                </p>
+                <div class="hero-cta-group">
+                    <a href="#featured" class="btn-ink-primary">Read Case Studies →</a>
+                    <a href="#about-me" class="btn-ink-secondary">About Me</a>
+                </div>
             </div>
-            <h1 class="hero-title-main">My Digital Marketing Journey</h1>
-            <p class="hero-description-main">
-                A curated collection of speculative brand teardowns, social media audits, and hospitality growth strategies put into practice.
-            </p>
+
+            <!-- Hero Graphic Right -->
+            <div class="hero-graphic-right">
+                <img src="images/hero_desk_art.jpg" alt="Digital Marketing Case Study Desk Illustration" class="hero-illustration-img">
+                
+                <!-- Floating Glass Cards -->
+                <div class="floating-card-top">
+                    <span style="font-size: 0.75rem; font-weight: 700; color: var(--accent-terracotta); text-transform: uppercase;">📖 Case Studies</span>
+                    <span style="font-weight: 800; font-size: 1.1rem; color: var(--text-main);">Daily Uploads</span>
+                </div>
+
+                <div class="floating-card-bottom">
+                    <span style="font-size: 0.72rem; font-weight: 700; color: var(--accent-terracotta);">📌 Latest Teardown</span>
+                    <span style="font-weight: 700; font-size: 0.85rem; color: var(--text-main); line-height: 1.2;">Cafe Rêve Auroville</span>
+                    <span style="font-size: 0.75rem; color: var(--text-subtle);">4 min read</span>
+                </div>
+            </div>
         </section>
 
-        <!-- Search & Category Filters -->
-        <div class="controls-glass-bar" id="case-studies">
-            <div class="search-glass-box">
-                <svg class="search-glass-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                <input type="text" id="search-input" class="search-glass-input" placeholder="Search case studies by topic..." oninput="filterArticles()">
-            </div>
-            <div class="filter-glass-pills">
-                <button class="filter-glass-btn active" onclick="setFilter('all', this)">All Articles</button>
-                <button class="filter-glass-btn" onclick="setFilter('audit', this)">Social Media Audit</button>
-                <button class="filter-glass-btn" onclick="setFilter('instagram', this)">Instagram Strategy</button>
-                <button class="filter-glass-btn" onclick="setFilter('hospitality', this)">Hospitality</button>
-            </div>
-        </div>
-
-        <!-- Featured Case Study Card -->
-        <a href="posts/cafe-reve-auroville.html" class="featured-glass-card" data-category="audit instagram hospitality">
-            <div class="featured-img-wrap">
-                <img src="images/marketing_funnel_infographic.jpg" alt="Cafe Rêve Auroville Marketing Funnel" class="featured-img-element">
-            </div>
-            <div class="featured-content-inner">
-                <div class="article-tags-row">
-                    <span class="tag-glass">Featured Case Study</span>
-                    <span class="tag-glass" style="background: var(--bg-subtle); color: var(--text-muted);">Instagram Audit</span>
+        <!-- FEATURED STORIES SECTION (IMAGE 3) -->
+        <section id="featured" style="margin-bottom: 72px;">
+            <div class="section-header-row">
+                <div>
+                    <span class="script-tag">Latest writing</span>
+                    <h2 class="section-title-ink">Featured <span class="serif-italic">Stories</span></h2>
                 </div>
-                <h2 class="featured-card-heading">Applied Social Media Strategy: Optimizing Instagram Brand Positioning and Customer Flow for Cafe Rêve Auroville</h2>
-                <p class="featured-card-excerpt">
-                    A comprehensive brand case study evaluating profile completeness, operational transparency, and 3-stage customer conversion funnels for local hospitality.
-                </p>
-                <div class="article-meta-row">
-                    <span style="color: var(--text-main); font-weight: 700;">Padmaja Senthil</span>
-                    <span>•</span>
-                    <time>Aug 4, 2026</time>
-                    <span>•</span>
-                    <span>4 min read</span>
-                </div>
+                <a href="#archives" class="btn-ink-secondary" style="padding: 8px 20px; font-size: 0.88rem;">View all posts →</a>
             </div>
-        </a>
 
-        <!-- More Case Studies Grid -->
-        <h3 class="section-header-title">More Case Studies</h3>
-        <div class="articles-grid-layout" id="articles-grid">
-
-            <!-- Card 1 (Active Case Study) -->
-            <a href="posts/cafe-reve-auroville.html" class="article-glass-card" data-category="audit instagram hospitality">
-                <div class="card-img-container">
-                    <img src="images/optimization_plan_infographic.jpg" alt="Profile Optimization Blueprint" class="card-img-element">
-                </div>
-                <div class="card-body-inner">
-                    <div class="article-tags-row">
-                        <span class="tag-glass">Case Study</span>
+            <div class="featured-grid-ink">
+                <!-- Tall Main Feature Card -->
+                <a href="posts/cafe-reve-auroville.html" class="card-featured-tall">
+                    <div class="card-tall-img-wrap">
+                        <img src="images/marketing_funnel_infographic.jpg" alt="Cafe Rêve Auroville Marketing Funnel" class="card-tall-img">
                     </div>
-                    <h4 class="card-heading-title">Cafe Rêve Auroville: 3-Step Profile Optimization Framework</h4>
-                    <p class="card-text-desc">Actionable optimizations for bio clarity, evergreen story highlight hubs, and targeted video call-to-actions.</p>
-                    <div class="article-meta-row">
-                        <time>Aug 4, 2026</time>
-                        <span>•</span>
-                        <span>4 min read</span>
+                    <div class="card-tall-body">
+                        <div class="card-meta-line">
+                            <span class="script-tag" style="font-size: 1rem;">Social Media Audit</span>
+                            <span>•</span>
+                            <time>Aug 4, 2026</time>
+                        </div>
+                        <h3 class="card-title-tall">Applied Social Media Strategy: Optimizing Instagram Brand Positioning and Customer Flow for Cafe Rêve Auroville</h3>
+                        <p class="card-desc-tall">
+                            A comprehensive brand case study evaluating profile completeness, operational transparency, and 3-stage customer conversion funnels for local hospitality.
+                        </p>
+                        <div class="card-author-row">
+                            <span style="font-size: 0.88rem; font-weight: 700; color: var(--text-main);">Padmaja Senthil</span>
+                            <span class="read-more-link">Read more →</span>
+                        </div>
                     </div>
-                </div>
-            </a>
+                </a>
 
-            <!-- Card 2 (Upcoming Concept 1) -->
-            <div class="article-glass-card" data-category="hospitality" style="opacity: 0.9;">
-                <div class="card-img-container" style="display: flex; align-items: center; justify-content: center; background: var(--bg-subtle); color: var(--text-subtle);">
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 17 22 12"></polyline></svg>
-                </div>
-                <div class="card-body-inner">
-                    <div class="article-tags-row">
-                        <span class="status-badge-glass">Upcoming Case Study</span>
-                    </div>
-                    <h4 class="card-heading-title">Local SEO & Google Maps Optimization for Artisanal Roasteries</h4>
-                    <p class="card-text-desc">Bridging online organic search rankings with high-intent foot traffic for local specialty coffee shops.</p>
-                    <div class="article-meta-row">
-                        <span>Daily Upload • Coming Soon</span>
+                <!-- Right Stacked Feature Cards -->
+                <div class="featured-right-stack">
+                    <!-- Stacked Card 1 -->
+                    <a href="posts/cafe-reve-auroville.html" class="card-featured-stacked">
+                        <div class="card-stacked-img-wrap">
+                            <img src="images/optimization_plan_infographic.jpg" alt="Profile Optimization Blueprint" class="card-tall-img">
+                        </div>
+                        <div class="card-stacked-body">
+                            <div class="card-meta-line">
+                                <span class="script-tag" style="font-size: 0.95rem;">Instagram Strategy</span>
+                                <span>•</span>
+                                <time>Aug 4, 2026</time>
+                            </div>
+                            <h4 class="card-title-stacked">Cafe Rêve Auroville: 3-Step Profile Optimization Framework</h4>
+                            <span class="read-more-link" style="margin-top: 8px;">Read more →</span>
+                        </div>
+                    </a>
+
+                    <!-- Stacked Card 2 -->
+                    <div class="card-featured-stacked" style="opacity: 0.9;">
+                        <div class="card-stacked-img-wrap" style="display: flex; align-items: center; justify-content: center; background-color: var(--bg-subtle);">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="var(--accent-terracotta)" stroke-width="1.5"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 17 22 12"></polyline></svg>
+                        </div>
+                        <div class="card-stacked-body">
+                            <div class="card-meta-line">
+                                <span class="script-tag" style="font-size: 0.95rem;">Hospitality SEO</span>
+                                <span>•</span>
+                                <span>Coming Soon</span>
+                            </div>
+                            <h4 class="card-title-stacked">Local SEO & Google Maps Optimization for Artisanal Roasteries</h4>
+                            <span style="font-size: 0.8rem; font-weight: 700; color: var(--accent-amber); margin-top: 4px;">Daily Upload Concept</span>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Card 3 (Upcoming Concept 2) -->
-            <div class="article-glass-card" data-category="instagram" style="opacity: 0.9;">
-                <div class="card-img-container" style="display: flex; align-items: center; justify-content: center; background: var(--bg-subtle); color: var(--text-subtle);">
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        <!-- FROM THE ARCHIVES SECTION (IMAGE 2) -->
+        <section id="archives" style="margin-bottom: 72px;">
+            <div class="section-header-row">
+                <div>
+                    <span class="script-tag">All posts</span>
+                    <h2 class="section-title-ink">From the <span class="serif-italic">Archives</span></h2>
                 </div>
-                <div class="card-body-inner">
-                    <div class="article-tags-row">
-                        <span class="status-badge-glass">Upcoming Case Study</span>
+            </div>
+
+            <div class="archives-grid-ink">
+                <!-- Card 1 -->
+                <a href="posts/cafe-reve-auroville.html" class="card-archive-ink">
+                    <div class="archive-img-wrap">
+                        <img src="images/brew_guide_infographic.jpg" alt="Brewing Guide Infographic" class="archive-img">
                     </div>
-                    <h4 class="card-heading-title">Short-Form Video Conversion Patterns in Hospitality Marketing</h4>
-                    <p class="card-text-desc">Analyzing 6-second reel hooks and call-to-action timing to maximize audience saves and shares.</p>
-                    <div class="article-meta-row">
-                        <span>Daily Upload • Coming Soon</span>
+                    <div class="archive-body">
+                        <span class="archive-category-script">Social Media Audit</span>
+                        <h4 class="archive-title">The Art of Brand Positioning: Converting Profile Visitors into Customers</h4>
+                        <div class="archive-footer-meta">
+                            <time>Aug 4, 2026</time>
+                            <span>⏱ 4 min read</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 2 -->
+                <a href="posts/cafe-reve-auroville.html" class="card-archive-ink">
+                    <div class="archive-img-wrap">
+                        <img src="images/roast_infographic.jpg" alt="Roast Spectrum Infographic" class="archive-img">
+                    </div>
+                    <div class="archive-body">
+                        <span class="archive-category-script">Instagram Strategy</span>
+                        <h4 class="archive-title">Why Clear Value Propositions Outperform Vague Aesthetics</h4>
+                        <div class="archive-footer-meta">
+                            <time>Aug 4, 2026</time>
+                            <span>⏱ 5 min read</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Card 3 -->
+                <a href="posts/cafe-reve-auroville.html" class="card-archive-ink">
+                    <div class="archive-img-wrap">
+                        <img src="images/rev_cafe_hero.jpg" alt="Rev Cafe Hero" class="archive-img">
+                    </div>
+                    <div class="archive-body">
+                        <span class="archive-category-script">Hospitality Marketing</span>
+                        <h4 class="archive-title">Building Organic Community Engagement for Local Auroville Cafes</h4>
+                        <div class="archive-footer-meta">
+                            <time>Aug 4, 2026</time>
+                            <span>⏱ 6 min read</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- ABOUT ME SECTION (IMAGE 4) -->
+        <section class="about-section-ink" id="about-me">
+            <!-- Left Avatar Card -->
+            <div class="about-avatar-container">
+                <div class="about-avatar-card">
+                    <img src="images/inkwell_avatar.jpg" alt="Padmaja Senthil Avatar" class="about-avatar-img">
+                    
+                    <div class="about-experience-badge">
+                        <div class="exp-number">Daily</div>
+                        <div class="exp-label">Case Studies</div>
                     </div>
                 </div>
             </div>
 
-        </div>
-
-        <!-- ABOUT ME SECTION WITH CLIP-ART ANIMATION -->
-        <section class="about-glass-section" id="about-me">
-            <div class="about-content-left">
-                <span class="glass-pill-badge">About The Author</span>
-                <h2 class="about-main-heading">Hi, I’m padmaja.</h2>
-                <p class="about-paragraph">
+            <!-- Right Text Content -->
+            <div class="about-right-text">
+                <span class="script-tag">About me</span>
+                <h2 class="about-heading-ink">
+                    Hi, I'm Padmaja. I dissect what makes a brand <span class="serif-italic">successful.</span>
+                </h2>
+                
+                <p class="about-paragraph-ink">
                     I am currently a digital marketing student with a passion for dissecting what makes a brand successful. I believe the best way to master the craft is to put theory into practice, which is why I created this blog.
                 </p>
-                <p class="about-paragraph">
+                
+                <p class="about-paragraph-ink">
                     Here, I publish regular brand teardowns—deep dives and case studies that analyze the strategies behind the marketing campaigns we see every day.
                 </p>
-                <p class="about-paragraph">
+
+                <p class="about-paragraph-ink">
                     I am always learning and constantly looking for new perspectives. Whether you are a fellow student, a marketing professional, or just curious about the industry or you are a brand/business, I’m glad you’re here. Let’s explore the world of marketing together.
                 </p>
-            </div>
 
-            <!-- Clip-art Vector Illustration & Micro-motion Badges -->
-            <div class="about-clipart-wrapper">
-                <div class="clipart-frame">
-                    <img src="images/digital_marketing_vector.jpg" alt="Digital Marketing Case Study Illustration" class="clipart-img">
+                <!-- Interactive Pill Tags -->
+                <div class="pill-tags-grid">
+                    <span class="ink-pill-tag">✦ Storytelling</span>
+                    <span class="ink-pill-tag">✦ Brand Strategy</span>
+                    <span class="ink-pill-tag">✦ Social Media Audit</span>
+                    <span class="ink-pill-tag">✦ Hospitality</span>
+                    <span class="ink-pill-tag">✦ Local SEO</span>
                 </div>
-                <div class="floating-badge-1">✨ Teardowns & Audits</div>
-                <div class="floating-badge-2">📈 Daily Case Studies</div>
+
+                <!-- Social Round Buttons -->
+                <div class="social-round-btns">
+                    <a href="https://x.com" target="_blank" rel="noopener" class="round-icon-btn" aria-label="X / Twitter">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener" class="round-icon-btn" aria-label="Instagram">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    </a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener" class="round-icon-btn" aria-label="Facebook">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                    </a>
+                    <a href="https://github.com/padmajasenthil04/blog-post" target="_blank" rel="noopener" class="round-icon-btn" aria-label="GitHub Repository">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    </a>
+                </div>
             </div>
         </section>
 
-        <!-- FOOTER -->
-        <footer class="site-footer-glass">
-            <div class="footer-social-grid">
-                <a href="https://instagram.com" target="_blank" rel="noopener" class="social-glass-btn" aria-label="Instagram">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                </a>
-                <a href="https://facebook.com" target="_blank" rel="noopener" class="social-glass-btn" aria-label="Facebook">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-                </a>
-                <a href="https://x.com" target="_blank" rel="noopener" class="social-glass-btn" aria-label="X (Twitter)">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                </a>
-                <a href="https://github.com/padmajasenthil04/blog-post" target="_blank" rel="noopener" class="social-glass-btn" aria-label="GitHub Repository">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                </a>
+        <!-- NEWSLETTER BANNER (IMAGE 1) -->
+        <section class="newsletter-banner-dark" id="newsletter">
+            <span class="script-tag" style="color: var(--accent-terracotta);">Stay connected</span>
+            <h2 class="newsletter-heading-dark">
+                Case studies, <span class="serif-italic">weekly</span>, straight to your inbox
+            </h2>
+            <p class="newsletter-desc-dark">
+                No spam, no noise — just thoughtful teardowns and growth strategies, delivered straight to your inbox.
+            </p>
+            <div class="newsletter-form-box">
+                <input type="email" class="newsletter-input-dark" placeholder="your@email.com" required>
+                <button type="submit" class="newsletter-btn-orange">Subscribe →</button>
             </div>
-            <p>© 2026 Padmaja Senthil • My Digital Marketing Journey.</p>
-            <div class="vercel-glass-pill">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M24 22.5D12 1.5 0 22.5h24z"/></svg>
-                Automated Daily Vercel Deployments
-            </div>
-        </footer>
+            <span style="font-size: 0.8rem; color: var(--text-muted-on-dark); margin-top: 4px;">Unsubscribe anytime. Your inbox is sacred.</span>
+        </section>
 
     </main>
 
-    <!-- INTERACTIVE SCRIPT -->
+    <!-- FOOTER (IMAGE 1) -->
+    <footer class="ink-footer-dark">
+        <div class="footer-inner-max">
+            <div class="footer-grid-4col">
+                <!-- Col 1 -->
+                <div>
+                    <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 16px;">
+                        <div style="width: 32px; height: 32px; border-radius: 8px; background-color: var(--bg-body); color: var(--text-main); display: flex; align-items: center; justify-content: center; font-size: 1rem;">✏️</div>
+                        <span style="font-family: var(--font-heading); font-size: 1.3rem; font-weight: 700; color: #fff;">Ink<span style="color: var(--accent-terracotta);">well</span></span>
+                    </div>
+                    <p style="font-size: 0.88rem; color: var(--text-muted-on-dark); line-height: 1.6; max-width: 240px;">
+                        A personal blog by Padmaja Senthil. Dissecting what makes a brand successful through daily marketing teardowns.
+                    </p>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="footer-col-title">WRITING</h4>
+                    <ul class="footer-link-list">
+                        <li><a href="#featured" class="footer-link-item">All Case Studies</a></li>
+                        <li><a href="#featured" class="footer-link-item">Social Media Audits</a></li>
+                        <li><a href="#featured" class="footer-link-item">Instagram Strategy</a></li>
+                        <li><a href="#featured" class="footer-link-item">Hospitality Growth</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="footer-col-title">ABOUT</h4>
+                    <ul class="footer-link-list">
+                        <li><a href="#about-me" class="footer-link-item">My Story</a></li>
+                        <li><a href="#about-me" class="footer-link-item">Student Journey</a></li>
+                        <li><a href="#newsletter" class="footer-link-item">Newsletter</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h4 class="footer-col-title">CONNECT</h4>
+                    <ul class="footer-link-list">
+                        <li><a href="https://x.com" target="_blank" rel="noopener" class="footer-link-item">Twitter / X</a></li>
+                        <li><a href="https://instagram.com" target="_blank" rel="noopener" class="footer-link-item">Instagram</a></li>
+                        <li><a href="https://facebook.com" target="_blank" rel="noopener" class="footer-link-item">Facebook</a></li>
+                        <li><a href="https://github.com/padmajasenthil04/blog-post" target="_blank" rel="noopener" class="footer-link-item">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom Bar -->
+            <div class="footer-bottom-bar">
+                <span>© 2026 <strong>Inkwell</strong> · Built for Padmaja's Digital Marketing Journey</span>
+                <div class="footer-social-pills">
+                    <a href="https://x.com" target="_blank" rel="noopener" class="footer-social-pill" aria-label="X">X</a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-pill" aria-label="Instagram">IG</a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-pill" aria-label="Facebook">FB</a>
+                    <a href="https://github.com/padmajasenthil04/blog-post" target="_blank" rel="noopener" class="footer-social-pill" aria-label="GitHub">GH</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE SCRIPTS -->
     <script>
         // Dark/Light Theme Switcher
         const themeBtn = document.getElementById('theme-toggle');
@@ -1043,45 +1367,16 @@
             const currentTheme = htmlElement.getAttribute('data-theme');
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
             htmlElement.setAttribute('data-theme', newTheme);
-            themeText.textContent = newTheme === 'dark' ? 'Light Mode' : 'Dark Mode';
+            themeText.textContent = newTheme === 'dark' ? 'Light' : 'Dark';
         });
 
-        // Mobile Navigation Hamburger Toggle
-        const mobileBtn = document.getElementById('mobile-hamburger');
-        const navMenu = document.getElementById('nav-links-menu');
+        // Mobile Navigation Toggle
+        const mobileBtn = document.getElementById('mobile-toggle-btn');
+        const navMenu = document.getElementById('ink-nav-menu');
 
         if (mobileBtn && navMenu) {
             mobileBtn.addEventListener('click', () => {
-                navMenu.classList.toggle('open');
-            });
-        }
-
-        // Category Filter Logic
-        let activeCategory = 'all';
-
-        function setFilter(category, btnElement) {
-            activeCategory = category;
-            document.querySelectorAll('.filter-glass-btn').forEach(btn => btn.classList.remove('active'));
-            btnElement.classList.add('active');
-            filterArticles();
-        }
-
-        function filterArticles() {
-            const query = document.getElementById('search-input').value.toLowerCase();
-            const cards = document.querySelectorAll('.featured-glass-card, .article-glass-card');
-
-            cards.forEach(card => {
-                const categories = card.getAttribute('data-category') || '';
-                const text = card.textContent.toLowerCase();
-
-                const matchesCategory = activeCategory === 'all' || categories.includes(activeCategory);
-                const matchesQuery = text.includes(query);
-
-                if (matchesCategory && matchesQuery) {
-                    card.style.display = '';
-                } else {
-                    card.style.display = 'none';
-                }
+                navMenu.classList.toggle('mobile-open');
             });
         }
     </script>
