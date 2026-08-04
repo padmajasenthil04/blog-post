@@ -3,79 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Marketing Case Studies — Student Insights & Teardowns</title>
-    <meta name="description" content="A curated collection of speculative digital marketing case studies, social media audits, and growth teardowns created by a digital marketing student.">
+    <title>My Digital Marketing Journey — Case Study Series</title>
+    <meta name="description" content="A curated collection of speculative brand teardowns, social media audits, and hospitality growth strategies put into practice.">
     <meta name="author" content="Padmaja Senthil">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
     <style>
         /* ==========================================
-           DESIGN SYSTEM & CSS VARIABLES
+           NEOMORPHIC DESIGN SYSTEM & THEME TOKENS
            ========================================== */
         :root {
-            /* Light Theme */
-            --bg-body: #FAF8F5;
-            --bg-surface: #FFFFFF;
-            --bg-subtle: #F3EFEA;
-            --bg-card-hover: #ECE6DE;
-            --border-color: #E6E0D7;
-            --border-accent: #D4C9BC;
+            /* Light Neomorphic Palette */
+            --bg-body: #e4ebf5;
+            --bg-surface: #e4ebf5;
+            --bg-subtle: #dbe2ed;
             
-            --text-main: #1C1917;
-            --text-muted: #57534E;
-            --text-subtle: #78716C;
+            --neo-shadow-out: 8px 8px 16px #c2c9d6, -8px -8px 16px #ffffff;
+            --neo-shadow-sm: 4px 4px 10px #c2c9d6, -4px -4px 10px #ffffff;
+            --neo-shadow-hover: 12px 12px 22px #b8c0cd, -12px -12px 22px #ffffff;
+            --neo-shadow-inset: inset 4px 4px 8px #c2c9d6, inset -4px -4px 8px #ffffff;
+            --neo-shadow-inset-sm: inset 2px 2px 4px #c2c9d6, inset -2px -2px 4px #ffffff;
+
+            --text-main: #2d3748;
+            --text-muted: #64748b;
+            --text-subtle: #94a3b8;
             
-            --accent-terracotta: #C85A32;
-            --accent-terracotta-soft: #FDF3EF;
-            --accent-espresso: #2C221E;
-            --accent-sage: #4E6B5D;
-            --accent-amber: #D97706;
+            --accent-primary: #e05a36; /* Warm Terracotta */
+            --accent-primary-hover: #c44a29;
+            --accent-soft: rgba(224, 90, 54, 0.12);
+            --accent-sage: #38a169;
+            --accent-amber: #d97706;
 
             --font-heading: 'Newsreader', Georgia, serif;
             --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
             --font-mono: 'JetBrains Mono', monospace;
 
-            --shadow-sm: 0 1px 3px rgba(28, 25, 23, 0.05);
-            --shadow-md: 0 10px 25px -5px rgba(28, 25, 23, 0.06), 0 4px 10px -6px rgba(28, 25, 23, 0.04);
-            --shadow-lg: 0 20px 40px -15px rgba(28, 25, 23, 0.1);
+            --radius-sm: 10px;
+            --radius-md: 18px;
+            --radius-lg: 28px;
+            --radius-full: 9999px;
 
-            --radius-sm: 6px;
-            --radius-md: 12px;
-            --radius-lg: 20px;
-
-            --container-max: 1140px;
-            --header-height: 68px;
+            --sidebar-width: 300px;
+            --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         [data-theme="dark"] {
-            /* Dark Theme */
-            --bg-body: #12100E;
-            --bg-surface: #1C1917;
-            --bg-subtle: #26221F;
-            --bg-card-hover: #302B27;
-            --border-color: #332D28;
-            --border-accent: #443C36;
+            /* Dark Neomorphic Palette */
+            --bg-body: #1a1d24;
+            --bg-surface: #1a1d24;
+            --bg-subtle: #14161b;
             
-            --text-main: #F5F2EC;
-            --text-muted: #A8A096;
-            --text-subtle: #787066;
-            
-            --accent-terracotta: #E07A5F;
-            --accent-terracotta-soft: #2C1A14;
-            --accent-espresso: #F5F2EC;
-            --accent-sage: #81A692;
-            --accent-amber: #F59E0B;
+            --neo-shadow-out: 7px 7px 16px #121419, -7px -7px 16px #22262f;
+            --neo-shadow-sm: 4px 4px 10px #121419, -4px -4px 10px #22262f;
+            --neo-shadow-hover: 10px 10px 22px #0e1014, -10px -10px 22px #262a34;
+            --neo-shadow-inset: inset 4px 4px 8px #121419, inset -4px -4px 8px #22262f;
+            --neo-shadow-inset-sm: inset 2px 2px 4px #121419, inset -2px -2px 4px #22262f;
 
-            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
-            --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
-            --shadow-lg: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --text-subtle: #64748b;
+            
+            --accent-primary: #ff6b4a;
+            --accent-primary-hover: #e55737;
+            --accent-soft: rgba(255, 107, 74, 0.16);
+            --accent-sage: #48bb78;
+            --accent-amber: #f59e0b;
         }
 
-        /* Base Resets */
+        /* Base Reset */
         *, *::before, *::after {
             box-sizing: border-box;
             margin: 0;
@@ -89,525 +88,824 @@
             font-size: 1rem;
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            transition: background-color 0.4s ease, color 0.4s ease;
             min-height: 100vh;
             display: flex;
-            flex-direction: column;
         }
 
-        /* Header Navigation */
-        .site-header {
-            position: sticky;
+        /* ==========================================
+           VERTICAL NAVIGATION SIDEBAR (Avento / Inkwell)
+           ========================================== */
+        .sidebar {
+            width: var(--sidebar-width);
+            height: 100vh;
+            position: fixed;
             top: 0;
-            height: var(--header-height);
-            background-color: rgba(250, 248, 245, 0.9);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border-color);
-            z-index: 900;
+            left: 0;
+            background: var(--bg-surface);
+            box-shadow: var(--neo-shadow-out);
+            padding: 36px 28px;
             display: flex;
-            align-items: center;
-            transition: background-color 0.3s ease, border-color 0.3s ease;
-        }
-
-        [data-theme="dark"] .site-header {
-            background-color: rgba(18, 16, 14, 0.9);
-        }
-
-        .header-inner {
-            width: 100%;
-            max-width: var(--container-max);
-            margin: 0 auto;
-            padding: 0 24px;
-            display: flex;
+            flex-direction: column;
             justify-content: space-between;
-            align-items: center;
+            z-index: 1000;
+            transition: var(--transition-smooth);
+            overflow-y: auto;
         }
 
-        .brand-logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
+        .sidebar-brand {
             text-decoration: none;
-            color: var(--text-main);
-            font-weight: 700;
-            font-size: 1.05rem;
-            letter-spacing: -0.01em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 32px;
         }
 
-        .brand-logo-icon {
-            width: 34px;
-            height: 34px;
-            border-radius: 8px;
-            background: var(--accent-terracotta-soft);
-            color: var(--accent-terracotta);
+        .profile-avatar-wrap {
+            width: 90px;
+            height: 90px;
+            border-radius: var(--radius-full);
+            background: var(--bg-surface);
+            box-shadow: var(--neo-shadow-out);
+            padding: 6px;
+            margin-bottom: 16px;
+            position: relative;
+            transition: var(--transition-smooth);
+        }
+
+        .profile-avatar-wrap:hover {
+            box-shadow: var(--neo-shadow-hover);
+            transform: scale(1.03);
+        }
+
+        .profile-avatar-inner {
+            width: 100%;
+            height: 100%;
+            border-radius: var(--radius-full);
+            background: linear-gradient(135deg, var(--accent-primary), #ff8f70);
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 1px solid rgba(200, 90, 50, 0.2);
+            color: #ffffff;
+            font-size: 2rem;
+            font-weight: 800;
+            box-shadow: var(--neo-shadow-inset-sm);
         }
 
-        .header-nav-links {
+        .brand-title {
+            font-family: var(--font-heading);
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--text-main);
+            line-height: 1.25;
+            margin-bottom: 6px;
+        }
+
+        .brand-badge {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--accent-primary);
+            background: var(--accent-soft);
+            padding: 4px 12px;
+            border-radius: var(--radius-full);
+            display: inline-block;
+            box-shadow: var(--neo-shadow-inset-sm);
+        }
+
+        /* Navigation Links */
+        .sidebar-nav {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            margin-bottom: auto;
+        }
+
+        .nav-item-btn {
             display: flex;
             align-items: center;
+            gap: 14px;
+            padding: 12px 20px;
+            border-radius: var(--radius-md);
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            background: var(--bg-surface);
+            box-shadow: var(--neo-shadow-sm);
+            transition: var(--transition-smooth);
+            border: none;
+            cursor: pointer;
+        }
+
+        .nav-item-btn:hover {
+            color: var(--accent-primary);
+            box-shadow: var(--neo-shadow-hover);
+            transform: translateY(-2px);
+        }
+
+        .nav-item-btn.active {
+            color: var(--accent-primary);
+            box-shadow: var(--neo-shadow-inset);
+            font-weight: 700;
+        }
+
+        .nav-item-icon {
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Social Icons Section */
+        .sidebar-social-box {
+            padding-top: 24px;
+            border-top: 1px solid rgba(148, 163, 184, 0.2);
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .social-title {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-subtle);
+        }
+
+        .social-icons-grid {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .social-icon-btn {
+            width: 42px;
+            height: 42px;
+            border-radius: var(--radius-full);
+            background: var(--bg-surface);
+            box-shadow: var(--neo-shadow-out);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: var(--transition-smooth);
+        }
+
+        .social-icon-btn:hover {
+            color: var(--accent-primary);
+            box-shadow: var(--neo-shadow-hover);
+            transform: translateY(-3px);
+        }
+
+        .social-icon-btn:active {
+            box-shadow: var(--neo-shadow-inset);
+            transform: translateY(0);
+        }
+
+        /* Theme Toggle Button */
+        .theme-toggle-neo {
+            width: 100%;
+            margin-top: 16px;
+            padding: 12px;
+            border-radius: var(--radius-md);
+            background: var(--bg-surface);
+            box-shadow: var(--neo-shadow-out);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: var(--text-main);
+            font-weight: 700;
+            font-size: 0.9rem;
+            transition: var(--transition-smooth);
+        }
+
+        .theme-toggle-neo:hover {
+            box-shadow: var(--neo-shadow-hover);
+            color: var(--accent-primary);
+        }
+
+        .theme-toggle-neo:active {
+            box-shadow: var(--neo-shadow-inset);
+        }
+
+        /* Mobile Header Bar */
+        .mobile-header {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 64px;
+            background: var(--bg-surface);
+            box-shadow: var(--neo-shadow-out);
+            padding: 0 20px;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 1100;
+        }
+
+        .mobile-toggle-btn {
+            width: 44px;
+            height: 44px;
+            border-radius: var(--radius-sm);
+            background: var(--bg-surface);
+            box-shadow: var(--neo-shadow-out);
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-main);
+            cursor: pointer;
+        }
+
+        /* ==========================================
+           MAIN CONTENT AREA
+           ========================================== */
+        .main-container {
+            margin-left: var(--sidebar-width);
+            flex: 1;
+            padding: 48px 48px 80px;
+            max-width: 1200px;
+            transition: var(--transition-smooth);
+        }
+
+        /* Hero Banner (Referral / Inkwell Style) */
+        .hero-card {
+            background: var(--bg-surface);
+            box-shadow: var(--neo-shadow-out);
+            border-radius: var(--radius-lg);
+            padding: 48px 40px;
+            margin-bottom: 48px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
             gap: 20px;
         }
 
-        .nav-link {
-            color: var(--text-muted);
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 600;
-            transition: color 0.2s ease;
+        .hero-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 6px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--accent-primary), var(--accent-amber));
         }
 
-        .nav-link:hover {
-            color: var(--accent-terracotta);
-        }
-
-        .theme-toggle-btn {
-            background: var(--bg-subtle);
-            border: 1px solid var(--border-color);
-            color: var(--text-main);
-            padding: 8px 12px;
-            border-radius: var(--radius-sm);
-            cursor: pointer;
-            font-size: 0.85rem;
-            font-weight: 600;
+        .hero-badge-row {
             display: flex;
             align-items: center;
-            gap: 6px;
-            transition: all 0.2s ease;
+            gap: 12px;
         }
 
-        .theme-toggle-btn:hover {
-            background: var(--bg-card-hover);
-            border-color: var(--border-accent);
-        }
-
-        /* Container */
-        .main-wrapper {
-            max-width: var(--container-max);
-            margin: 0 auto;
-            padding: 56px 24px 80px;
-            flex: 1;
-            width: 100%;
-        }
-
-        /* Hero Header Section */
-        .hero-section {
-            margin-bottom: 56px;
-            text-align: center;
-            max-width: 760px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background-color: var(--accent-terracotta-soft);
-            color: var(--accent-terracotta);
-            padding: 4px 12px;
-            border-radius: 99px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            border: 1px solid rgba(200, 90, 50, 0.2);
-            margin-bottom: 16px;
-        }
-
-        .hero-title {
+        .hero-main-title {
             font-family: var(--font-heading);
-            font-size: clamp(2.2rem, 5vw, 3.4rem);
+            font-size: clamp(2.4rem, 4vw, 3.6rem);
             font-weight: 600;
             line-height: 1.15;
-            letter-spacing: -0.02em;
             color: var(--text-main);
-            margin-bottom: 16px;
+            letter-spacing: -0.02em;
         }
 
-        .hero-subtitle {
+        .hero-sub-subtitle {
             font-size: 1.15rem;
             color: var(--text-muted);
-            line-height: 1.6;
+            max-width: 780px;
+            line-height: 1.65;
         }
 
-        /* Search & Filter Controls */
-        .controls-bar {
+        /* Search & Filter Section */
+        .controls-wrapper {
+            background: var(--bg-surface);
+            box-shadow: var(--neo-shadow-out);
+            border-radius: var(--radius-md);
+            padding: 20px 24px;
+            margin-bottom: 40px;
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-between;
             align-items: center;
-            gap: 16px;
-            margin-bottom: 36px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid var(--border-color);
+            justify-content: space-between;
+            gap: 20px;
         }
 
-        .search-box {
+        .search-neo-box {
             position: relative;
             flex: 1;
             min-width: 260px;
-            max-width: 380px;
+            max-width: 420px;
         }
 
-        .search-input {
+        .search-neo-input {
             width: 100%;
-            padding: 10px 14px 10px 38px;
-            border-radius: var(--radius-sm);
-            border: 1px solid var(--border-color);
-            background-color: var(--bg-surface);
+            padding: 12px 16px 12px 44px;
+            border-radius: var(--radius-full);
+            background: var(--bg-surface);
+            box-shadow: var(--neo-shadow-inset);
+            border: none;
             color: var(--text-main);
             font-family: var(--font-body);
-            font-size: 0.9rem;
-            transition: border-color 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .search-input:focus {
+            font-size: 0.95rem;
             outline: none;
-            border-color: var(--accent-terracotta);
-            box-shadow: 0 0 0 3px rgba(200, 90, 50, 0.12);
+            transition: var(--transition-smooth);
         }
 
-        .search-icon {
+        .search-neo-input:focus {
+            box-shadow: var(--neo-shadow-inset), 0 0 0 2px var(--accent-primary);
+        }
+
+        .search-neo-icon {
             position: absolute;
-            left: 12px;
+            left: 16px;
             top: 50%;
             transform: translateY(-50%);
             color: var(--text-subtle);
             pointer-events: none;
         }
 
-        .filter-pills {
+        .filter-pills-neo {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 10px;
         }
 
-        .filter-pill {
-            background-color: var(--bg-subtle);
-            border: 1px solid var(--border-color);
+        .filter-pill-btn {
+            padding: 8px 18px;
+            border-radius: var(--radius-full);
+            background: var(--bg-surface);
+            box-shadow: var(--neo-shadow-out);
+            border: none;
             color: var(--text-muted);
-            padding: 6px 14px;
-            border-radius: 99px;
-            font-size: 0.825rem;
-            font-weight: 600;
+            font-size: 0.85rem;
+            font-weight: 700;
             cursor: pointer;
-            transition: all 0.2s ease;
+            transition: var(--transition-smooth);
         }
 
-        .filter-pill:hover {
-            color: var(--text-main);
-            background-color: var(--bg-card-hover);
+        .filter-pill-btn:hover {
+            color: var(--accent-primary);
+            box-shadow: var(--neo-shadow-hover);
         }
 
-        .filter-pill.active {
-            background-color: var(--accent-terracotta);
-            color: #ffffff;
-            border-color: var(--accent-terracotta);
+        .filter-pill-btn.active {
+            color: var(--accent-primary);
+            box-shadow: var(--neo-shadow-inset);
         }
 
         /* Featured Article Card */
-        .featured-card {
-            background-color: var(--bg-surface);
-            border: 1px solid var(--border-color);
+        .featured-card-neo {
+            background: var(--bg-surface);
+            box-shadow: var(--neo-shadow-out);
             border-radius: var(--radius-lg);
             overflow: hidden;
-            box-shadow: var(--shadow-md);
             margin-bottom: 48px;
             display: grid;
             grid-template-columns: 1fr;
-            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
             text-decoration: none;
             color: inherit;
+            transition: var(--transition-smooth);
         }
 
-        @media (min-width: 860px) {
-            .featured-card {
+        @media (min-width: 900px) {
+            .featured-card-neo {
                 grid-template-columns: 1.15fr 1fr;
             }
         }
 
-        .featured-card:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-lg);
-            border-color: var(--accent-terracotta);
+        .featured-card-neo:hover {
+            box-shadow: var(--neo-shadow-hover);
+            transform: translateY(-4px);
         }
 
-        .featured-img-wrap {
+        .featured-img-container {
             position: relative;
-            background-color: var(--bg-subtle);
-            min-height: 240px;
+            min-height: 280px;
+            background: var(--bg-subtle);
             overflow: hidden;
         }
 
-        .featured-img {
+        .featured-img-neo {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            display: block;
-            transition: transform 0.4s ease;
+            transition: transform 0.5s ease;
         }
 
-        .featured-card:hover .featured-img {
-            transform: scale(1.03);
+        .featured-card-neo:hover .featured-img-neo {
+            transform: scale(1.05);
         }
 
-        .featured-content {
-            padding: 32px;
+        .featured-body-neo {
+            padding: 36px;
             display: flex;
             flex-direction: column;
             justify-content: center;
         }
 
-        .article-tags {
+        .tag-row {
             display: flex;
-            flex-wrap: wrap;
             gap: 8px;
-            margin-bottom: 12px;
+            margin-bottom: 14px;
+            flex-wrap: wrap;
         }
 
-        .tag {
+        .neo-tag {
             font-size: 0.75rem;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            color: var(--accent-terracotta);
-            background-color: var(--accent-terracotta-soft);
-            padding: 3px 8px;
-            border-radius: 4px;
+            color: var(--accent-primary);
+            background: var(--accent-soft);
+            padding: 4px 10px;
+            border-radius: var(--radius-sm);
+            box-shadow: var(--neo-shadow-inset-sm);
         }
 
-        .featured-title {
+        .featured-card-title {
             font-family: var(--font-heading);
-            font-size: 1.65rem;
+            font-size: 1.75rem;
             font-weight: 600;
             line-height: 1.25;
             color: var(--text-main);
-            margin-bottom: 12px;
-            letter-spacing: -0.01em;
+            margin-bottom: 14px;
         }
 
-        .featured-desc {
+        .featured-card-desc {
             font-size: 0.95rem;
             color: var(--text-muted);
-            line-height: 1.55;
-            margin-bottom: 20px;
+            line-height: 1.6;
+            margin-bottom: 24px;
         }
 
-        .meta-line {
+        .meta-line-neo {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             font-size: 0.825rem;
             color: var(--text-subtle);
-        }
-
-        .meta-author {
             font-weight: 600;
-            color: var(--text-main);
         }
 
         /* Articles Grid */
-        .section-heading {
+        .section-title-neo {
             font-family: var(--font-heading);
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             font-weight: 600;
             color: var(--text-main);
             margin-bottom: 24px;
-            letter-spacing: -0.01em;
         }
 
-        .articles-grid {
+        .articles-grid-neo {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 28px;
+            gap: 32px;
+            margin-bottom: 56px;
         }
 
-        .article-card {
-            background-color: var(--bg-surface);
-            border: 1px solid var(--border-color);
+        .article-card-neo {
+            background: var(--bg-surface);
+            box-shadow: var(--neo-shadow-out);
             border-radius: var(--radius-md);
             overflow: hidden;
-            box-shadow: var(--shadow-sm);
             display: flex;
             flex-direction: column;
             text-decoration: none;
             color: inherit;
-            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+            transition: var(--transition-smooth);
         }
 
-        .article-card:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-md);
-            border-color: var(--accent-terracotta);
+        .article-card-neo:hover {
+            box-shadow: var(--neo-shadow-hover);
+            transform: translateY(-4px);
         }
 
-        .card-img-wrap {
-            height: 180px;
-            background-color: var(--bg-subtle);
+        .card-img-neo-wrap {
+            height: 190px;
+            background: var(--bg-subtle);
             overflow: hidden;
             position: relative;
         }
 
-        .card-img {
+        .card-img-neo {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.3s ease;
+            transition: transform 0.4s ease;
         }
 
-        .article-card:hover .card-img {
-            transform: scale(1.04);
+        .article-card-neo:hover .card-img-neo {
+            transform: scale(1.06);
         }
 
-        .card-body {
-            padding: 20px;
+        .card-body-neo {
+            padding: 24px;
             flex: 1;
             display: flex;
             flex-direction: column;
         }
 
-        .card-title {
+        .card-title-neo {
             font-family: var(--font-heading);
-            font-size: 1.25rem;
+            font-size: 1.3rem;
             font-weight: 600;
             line-height: 1.3;
             color: var(--text-main);
+            margin-top: 10px;
             margin-bottom: 10px;
         }
 
-        .card-desc {
-            font-size: 0.875rem;
+        .card-desc-neo {
+            font-size: 0.88rem;
             color: var(--text-muted);
-            line-height: 1.5;
-            margin-bottom: 16px;
+            line-height: 1.55;
+            margin-bottom: 20px;
             flex: 1;
         }
 
-        .status-badge {
+        .status-badge-neo {
             font-size: 0.75rem;
             font-weight: 700;
             color: var(--accent-amber);
             background: rgba(217, 119, 6, 0.12);
-            padding: 3px 8px;
-            border-radius: 4px;
+            padding: 4px 10px;
+            border-radius: var(--radius-sm);
             display: inline-block;
+            box-shadow: var(--neo-shadow-inset-sm);
         }
 
-        /* Footer */
-        .site-footer {
-            border-top: 1px solid var(--border-color);
-            padding: 40px 24px;
-            background-color: var(--bg-subtle);
-            text-align: center;
-            font-size: 0.875rem;
-            color: var(--text-subtle);
+        /* ==========================================
+           ABOUT ME REFERRAL SECTION WITH CLIP-ART ANIMATION
+           ========================================== */
+        .about-referral-card {
+            background: var(--bg-surface);
+            box-shadow: var(--neo-shadow-out);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            margin-bottom: 56px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+            align-items: center;
         }
 
-        .footer-links {
+        @media (min-width: 840px) {
+            .about-referral-card {
+                grid-template-columns: 1.2fr 1fr;
+            }
+        }
+
+        .about-text-content {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .about-title {
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .about-bio {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            line-height: 1.65;
+        }
+
+        /* Animated Clip-Art SVG Graphic */
+        .clipart-animation-container {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 18px;
-            margin-bottom: 14px;
+            position: relative;
+            min-height: 220px;
         }
 
-        .footer-link {
-            color: var(--text-main);
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            transition: color 0.2s ease;
-        }
-
-        .footer-link:hover {
-            color: var(--accent-terracotta);
-        }
-
-        .vercel-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
+        .neo-clipart-bg {
+            width: 200px;
+            height: 200px;
+            border-radius: var(--radius-full);
             background: var(--bg-surface);
-            border: 1px solid var(--border-color);
-            padding: 4px 12px;
-            border-radius: 99px;
+            box-shadow: var(--neo-shadow-out);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .floating-art {
+            animation: floatBob 4s ease-in-out infinite;
+        }
+
+        .sparkle-art-1 {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            animation: pulseGlow 2.5s infinite alternate;
+        }
+
+        .sparkle-art-2 {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            animation: pulseGlow 3s infinite alternate 0.5s;
+        }
+
+        @keyframes floatBob {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-12px) rotate(2deg); }
+        }
+
+        @keyframes pulseGlow {
+            0% { transform: scale(0.9); opacity: 0.6; }
+            100% { transform: scale(1.15); opacity: 1; }
+        }
+
+        /* Footer Section */
+        .footer-neo {
+            background: var(--bg-surface);
+            box-shadow: var(--neo-shadow-inset);
+            border-radius: var(--radius-md);
+            padding: 32px 24px;
+            text-align: center;
+            color: var(--text-subtle);
+            font-size: 0.875rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .footer-social-links {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+        }
+
+        .vercel-neo-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            border-radius: var(--radius-full);
+            background: var(--bg-surface);
+            box-shadow: var(--neo-shadow-out);
             font-size: 0.75rem;
-            font-weight: 600;
+            font-weight: 700;
             color: var(--text-main);
-            margin-top: 8px;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 991px) {
+            .sidebar {
+                transform: translateX(-100%);
+            }
+            .sidebar.open {
+                transform: translateX(0);
+            }
+            .mobile-header {
+                display: flex;
+            }
+            .main-container {
+                margin-left: 0;
+                padding: 88px 20px 48px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Navigation -->
-    <header class="site-header">
-        <div class="header-inner">
-            <a href="index.html" class="brand-logo">
-                <div class="brand-logo-icon">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path></svg>
-                </div>
-                <span>Digital Marketing Insights</span>
-            </a>
-            <div class="header-nav-links">
-                <a href="https://github.com/padmajasenthil04/blog-post" target="_blank" rel="noopener" class="nav-link">GitHub Repo</a>
-                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle theme">
-                    <svg class="sun-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line></svg>
-                    <span id="theme-text">Dark</span>
-                </button>
-            </div>
-        </div>
+    <!-- Mobile Top Navigation Bar -->
+    <header class="mobile-header">
+        <button class="mobile-toggle-btn" id="mobile-sidebar-toggle" aria-label="Toggle Sidebar Navigation">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+        <span style="font-family: var(--font-heading); font-weight: 600; font-size: 1.1rem; color: var(--text-main);">My Digital Marketing Journey</span>
+        <div style="width: 44px;"></div>
     </header>
 
-    <!-- Main Content Container -->
-    <main class="main-wrapper">
+    <!-- Vertical Navigation Sidebar (Avento / Inkwell Style) -->
+    <aside class="sidebar" id="sidebar-nav">
+        <div>
+            <!-- Profile Avatar & Title -->
+            <a href="index.html" class="sidebar-brand">
+                <div class="profile-avatar-wrap">
+                    <div class="profile-avatar-inner">PS</div>
+                </div>
+                <h2 class="brand-title">My Digital Marketing Journey</h2>
+                <span class="brand-badge">Case Study Series</span>
+            </a>
 
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <span class="hero-badge">Student Case Study Series</span>
-            <h1 class="hero-title">Applied Digital Marketing Teardowns</h1>
-            <p class="hero-subtitle">
+            <!-- Sidebar Navigation Buttons -->
+            <nav class="sidebar-nav">
+                <a href="index.html" class="nav-item-btn active">
+                    <span class="nav-item-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                    </span>
+                    <span>Home</span>
+                </a>
+                <a href="#case-studies-section" class="nav-item-btn">
+                    <span class="nav-item-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                    </span>
+                    <span>Case Studies</span>
+                </a>
+                <a href="#about-me-section" class="nav-item-btn">
+                    <span class="nav-item-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                    </span>
+                    <span>About Me</span>
+                </a>
+            </nav>
+        </div>
+
+        <!-- Social Icons & Theme Switcher -->
+        <div class="sidebar-social-box">
+            <span class="social-title">Connect & Follow</span>
+            <div class="social-icons-grid">
+                <!-- Instagram -->
+                <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Instagram">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <!-- Facebook -->
+                <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Facebook">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                </a>
+                <!-- X / Twitter -->
+                <a href="https://x.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="X (formerly Twitter)">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <!-- GitHub -->
+                <a href="https://github.com/padmajasenthil04/blog-post" target="_blank" rel="noopener" class="social-icon-btn" aria-label="GitHub Repository">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+            </div>
+
+            <!-- Light/Dark Mode Switcher Button -->
+            <button class="theme-toggle-neo" id="theme-toggle" aria-label="Toggle theme">
+                <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line></svg>
+                <span id="theme-text">Dark Theme</span>
+            </button>
+        </div>
+    </aside>
+
+    <!-- Main Container -->
+    <main class="main-container">
+
+        <!-- Hero Referral Section -->
+        <section class="hero-card">
+            <div class="hero-badge-row">
+                <span class="brand-badge">Case Study Series</span>
+                <span class="neo-tag" style="background: var(--bg-subtle); color: var(--text-muted);">Daily Updates</span>
+            </div>
+            <h1 class="hero-main-title">My Digital Marketing Journey</h1>
+            <p class="hero-sub-subtitle">
                 A curated collection of speculative brand teardowns, social media audits, and hospitality growth strategies put into practice.
             </p>
         </section>
 
-        <!-- Search & Category Filters -->
-        <div class="controls-bar">
-            <div class="search-box">
-                <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                <input type="text" id="search-input" class="search-input" placeholder="Search case studies by topic..." oninput="filterArticles()">
+        <!-- Search & Filter Controls -->
+        <div class="controls-wrapper" id="case-studies-section">
+            <div class="search-neo-box">
+                <svg class="search-neo-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <input type="text" id="search-input" class="search-neo-input" placeholder="Search case studies by topic..." oninput="filterArticles()">
             </div>
-            <div class="filter-pills">
-                <button class="filter-pill active" onclick="setFilter('all', this)">All Articles</button>
-                <button class="filter-pill" onclick="setFilter('audit', this)">Social Media Audit</button>
-                <button class="filter-pill" onclick="setFilter('instagram', this)">Instagram Strategy</button>
-                <button class="filter-pill" onclick="setFilter('hospitality', this)">Hospitality</button>
+            <div class="filter-pills-neo">
+                <button class="filter-pill-btn active" onclick="setFilter('all', this)">All Articles</button>
+                <button class="filter-pill-btn" onclick="setFilter('audit', this)">Social Media Audit</button>
+                <button class="filter-pill-btn" onclick="setFilter('instagram', this)">Instagram Strategy</button>
+                <button class="filter-pill-btn" onclick="setFilter('hospitality', this)">Hospitality</button>
             </div>
         </div>
 
         <!-- Featured Case Study Card -->
-        <a href="posts/cafe-reve-auroville.html" class="featured-card" data-category="audit instagram hospitality">
-            <div class="featured-img-wrap">
-                <img src="images/marketing_funnel_infographic.jpg" alt="Cafe Rêve Auroville Marketing Funnel" class="featured-img">
+        <a href="posts/cafe-reve-auroville.html" class="featured-card-neo" data-category="audit instagram hospitality">
+            <div class="featured-img-container">
+                <img src="images/marketing_funnel_infographic.jpg" alt="Cafe Rêve Auroville Marketing Funnel" class="featured-img-neo">
             </div>
-            <div class="featured-content">
-                <div class="article-tags">
-                    <span class="tag">Featured Case Study</span>
-                    <span class="tag" style="background: var(--bg-subtle); color: var(--text-muted);">Instagram Audit</span>
+            <div class="featured-body-neo">
+                <div class="tag-row">
+                    <span class="neo-tag">Featured Case Study</span>
+                    <span class="neo-tag" style="background: var(--bg-subtle); color: var(--text-muted);">Instagram Audit</span>
                 </div>
-                <h2 class="featured-title">Applied Social Media Strategy: Optimizing Instagram Brand Positioning and Customer Flow for Cafe Rêve Auroville</h2>
-                <p class="featured-desc">
+                <h2 class="featured-card-title">Applied Social Media Strategy: Optimizing Instagram Brand Positioning and Customer Flow for Cafe Rêve Auroville</h2>
+                <p class="featured-card-desc">
                     A comprehensive brand case study evaluating profile completeness, operational transparency, and 3-stage customer conversion funnels for local hospitality.
                 </p>
-                <div class="meta-line">
-                    <span class="meta-author">Padmaja Senthil</span>
+                <div class="meta-line-neo">
+                    <span style="color: var(--text-main); font-weight: 700;">Padmaja Senthil</span>
                     <span>•</span>
                     <time>Aug 4, 2026</time>
                     <span>•</span>
@@ -617,21 +915,21 @@
         </a>
 
         <!-- More Case Studies Grid -->
-        <h3 class="section-heading">More Case Studies</h3>
-        <div class="articles-grid" id="articles-grid">
+        <h3 class="section-title-neo">More Case Studies</h3>
+        <div class="articles-grid-neo" id="articles-grid">
 
             <!-- Card 1 (Active Case Study) -->
-            <a href="posts/cafe-reve-auroville.html" class="article-card" data-category="audit instagram hospitality">
-                <div class="card-img-wrap">
-                    <img src="images/optimization_plan_infographic.jpg" alt="Profile Optimization Blueprint" class="card-img">
+            <a href="posts/cafe-reve-auroville.html" class="article-card-neo" data-category="audit instagram hospitality">
+                <div class="card-img-neo-wrap">
+                    <img src="images/optimization_plan_infographic.jpg" alt="Profile Optimization Blueprint" class="card-img-neo">
                 </div>
-                <div class="card-body">
-                    <div class="article-tags">
-                        <span class="tag">Case Study</span>
+                <div class="card-body-neo">
+                    <div class="tag-row">
+                        <span class="neo-tag">Case Study</span>
                     </div>
-                    <h4 class="card-title">Cafe Rêve Auroville: 3-Step Profile Optimization Framework</h4>
-                    <p class="card-desc">Actionable optimizations for bio clarity, evergreen story highlight hubs, and targeted video call-to-actions.</p>
-                    <div class="meta-line">
+                    <h4 class="card-title-neo">Cafe Rêve Auroville: 3-Step Profile Optimization Framework</h4>
+                    <p class="card-desc-neo">Actionable optimizations for bio clarity, evergreen story highlight hubs, and targeted video call-to-actions.</p>
+                    <div class="meta-line-neo">
                         <time>Aug 4, 2026</time>
                         <span>•</span>
                         <span>4 min read</span>
@@ -640,61 +938,101 @@
             </a>
 
             <!-- Card 2 (Upcoming Concept 1) -->
-            <div class="article-card" data-category="hospitality" style="opacity: 0.85;">
-                <div class="card-img-wrap" style="display: flex; align-items: center; justify-content: center; background: var(--bg-subtle); color: var(--text-subtle);">
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            <div class="article-card-neo" data-category="hospitality" style="opacity: 0.9;">
+                <div class="card-img-neo-wrap" style="display: flex; align-items: center; justify-content: center; background: var(--bg-subtle); color: var(--text-subtle);">
+                    <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
                 </div>
-                <div class="card-body">
-                    <div class="article-tags">
-                        <span class="status-badge">Upcoming Case Study</span>
+                <div class="card-body-neo">
+                    <div class="tag-row">
+                        <span class="status-badge-neo">Upcoming Case Study</span>
                     </div>
-                    <h4 class="card-title">Local SEO & Google Maps Optimization for Artisanal Roasteries</h4>
-                    <p class="card-desc">Bridging online organic search rankings with high-intent foot traffic for local specialty coffee shops.</p>
-                    <div class="meta-line">
-                        <span>Coming Soon</span>
+                    <h4 class="card-title-neo">Local SEO & Google Maps Optimization for Artisanal Roasteries</h4>
+                    <p class="card-desc-neo">Bridging online organic search rankings with high-intent foot traffic for local specialty coffee shops.</p>
+                    <div class="meta-line-neo">
+                        <span>Daily Upload • Coming Soon</span>
                     </div>
                 </div>
             </div>
 
             <!-- Card 3 (Upcoming Concept 2) -->
-            <div class="article-card" data-category="instagram" style="opacity: 0.85;">
-                <div class="card-img-wrap" style="display: flex; align-items: center; justify-content: center; background: var(--bg-subtle); color: var(--text-subtle);">
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            <div class="article-card-neo" data-category="instagram" style="opacity: 0.9;">
+                <div class="card-img-neo-wrap" style="display: flex; align-items: center; justify-content: center; background: var(--bg-subtle); color: var(--text-subtle);">
+                    <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                 </div>
-                <div class="card-body">
-                    <div class="article-tags">
-                        <span class="status-badge">Upcoming Case Study</span>
+                <div class="card-body-neo">
+                    <div class="tag-row">
+                        <span class="status-badge-neo">Upcoming Case Study</span>
                     </div>
-                    <h4 class="card-title">Short-Form Video Conversion Patterns in Hospitality Marketing</h4>
-                    <p class="card-desc">Analyzing 6-second reel hooks and call-to-action timing to maximize audience saves and shares.</p>
-                    <div class="meta-line">
-                        <span>Coming Soon</span>
+                    <h4 class="card-title-neo">Short-Form Video Conversion Patterns in Hospitality Marketing</h4>
+                    <p class="card-desc-neo">Analyzing 6-second reel hooks and call-to-action timing to maximize audience saves and shares.</p>
+                    <div class="meta-line-neo">
+                        <span>Daily Upload • Coming Soon</span>
                     </div>
                 </div>
             </div>
 
         </div>
 
+        <!-- About Me Referral Section with Clip-Art Animation -->
+        <section class="about-referral-card" id="about-me-section">
+            <div class="about-text-content">
+                <span class="brand-badge">About The Author</span>
+                <h3 class="about-title">Hi, I’m Padmaja.</h3>
+                <p class="about-bio">
+                    I am currently a digital marketing student with a passion for dissecting what makes a brand successful. I believe the best way to master the craft is to put theory into practice, which is why I created this blog.
+                </p>
+                <p class="about-bio">
+                    Here, I publish regular brand teardowns—deep dives and case studies that analyze the strategies behind the marketing campaigns we see every day.
+                </p>
+                <p class="about-bio">
+                    I am always learning and constantly looking for new perspectives. Whether you are a fellow student, a marketing professional, or just curious about the industry or you are a brand/business, I’m glad you’re here. Let’s explore the world of marketing together.
+                </p>
+            </div>
+
+            <!-- Clip-art Style Animated Graphic -->
+            <div class="clipart-animation-container">
+                <div class="neo-clipart-bg">
+                    <!-- Sparkle Accents -->
+                    <svg class="sparkle-art-1" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--accent-amber)" stroke-width="2"><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9 12 2"></polygon></svg>
+                    <svg class="sparkle-art-2" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2"><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9 12 2"></polygon></svg>
+                    
+                    <!-- Floating Clip-art Character / Icon -->
+                    <svg class="floating-art" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                        <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer-neo">
+            <div class="footer-social-links">
+                <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Instagram">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Facebook">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                </a>
+                <a href="https://x.com" target="_blank" rel="noopener" class="social-icon-btn" aria-label="X (Twitter)">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <a href="https://github.com/padmajasenthil04/blog-post" target="_blank" rel="noopener" class="social-icon-btn" aria-label="GitHub Repository">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
+            </div>
+            <p>© 2026 Padmaja Senthil • My Digital Marketing Journey.</p>
+            <div class="vercel-neo-badge">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M24 22.5D12 1.5 0 22.5h24z"/></svg>
+                Automated Daily Vercel Deployments
+            </div>
+        </footer>
+
     </main>
 
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="footer-links">
-            <a href="https://github.com/padmajasenthil04/blog-post" target="_blank" rel="noopener" class="footer-link">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-                GitHub Repository: padmajasenthil04/blog-post
-            </a>
-        </div>
-        <p>© 2026 Padmaja Senthil • Digital Marketing Case Studies.</p>
-        <div class="vercel-badge">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M24 22.5D12 1.5 0 22.5h24z"/></svg>
-            Ready for Automated Vercel CI/CD Deployment
-        </div>
-    </footer>
-
-    <!-- Interactive Filter & Search Script -->
+    <!-- Interactive Script (Theme, Filters, Sidebar Toggle) -->
     <script>
-        // Dark/Light Theme Toggle
+        // Dark/Light Theme Switcher
         const themeBtn = document.getElementById('theme-toggle');
         const themeText = document.getElementById('theme-text');
         const htmlElement = document.documentElement;
@@ -703,22 +1041,32 @@
             const currentTheme = htmlElement.getAttribute('data-theme');
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
             htmlElement.setAttribute('data-theme', newTheme);
-            themeText.textContent = newTheme === 'dark' ? 'Light' : 'Dark';
+            themeText.textContent = newTheme === 'dark' ? 'Light Theme' : 'Dark Theme';
         });
 
-        // Filter Pills Logic
+        // Mobile Sidebar Drawer Toggle
+        const mobileToggle = document.getElementById('mobile-sidebar-toggle');
+        const sidebar = document.getElementById('sidebar-nav');
+
+        if (mobileToggle && sidebar) {
+            mobileToggle.addEventListener('click', () => {
+                sidebar.classList.toggle('open');
+            });
+        }
+
+        // Category Filter Logic
         let activeCategory = 'all';
 
         function setFilter(category, btnElement) {
             activeCategory = category;
-            document.querySelectorAll('.filter-pill').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.filter-pill-btn').forEach(btn => btn.classList.remove('active'));
             btnElement.classList.add('active');
             filterArticles();
         }
 
         function filterArticles() {
             const query = document.getElementById('search-input').value.toLowerCase();
-            const cards = document.querySelectorAll('.featured-card, .article-card');
+            const cards = document.querySelectorAll('.featured-card-neo, .article-card-neo');
 
             cards.forEach(card => {
                 const categories = card.getAttribute('data-category') || '';
