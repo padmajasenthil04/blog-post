@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://blog-post-padmajasenthil04s-projects.vercel.app/sitemap.xml
+Sitemap: https://padmajabloop.vercel.app/sitemap.xml
