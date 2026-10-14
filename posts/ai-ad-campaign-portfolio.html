@@ -1,0 +1,1991 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BS97ZNFDHY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-BS97ZNFDHY');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Was an AI Skeptic. Then I Used It to Plan an Ad Campaign for My Portfolio | Padmaja Senthil</title>
+    <meta name="description" content="A digital marketing student's 4-step framework for using AI in ad campaigns without losing the human touch. From funnel matching to conversational UGC video prompts. Written by Padmaja Senthil.">
+    <meta name="keywords" content="AI in Marketing, Generative AI Advertising, AI Ad Campaign, UGC Video Ads, Human in the Loop AI, Digital Marketing Student, Prompt Engineering for Ads, Padmaja Senthil, AI Copywriting, Social Media Ad Strategy">
+    <meta name="author" content="Padmaja Senthil">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <link rel="canonical" href="https://padmajabloop.vercel.app/posts/ai-ad-campaign-portfolio">
+
+    <!-- Open Graph / LinkedIn Meta Tags -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://padmajabloop.vercel.app/posts/ai-ad-campaign-portfolio">
+    <meta property="og:title" content="I Was an AI Skeptic. Then I Used It to Plan an Ad Campaign for My Portfolio">
+    <meta property="og:description" content="A 4-step framework for aligning AI prompts with the customer journey, eliminating robotic plain text, and producing conversational UGC video ads. By Padmaja Senthil.">
+    <meta property="og:image" content="https://padmajabloop.vercel.app/images/ai_ad_campaign_hero.jpg">
+    <meta property="og:site_name" content="Padmaja Senthil Digital Marketing Portfolio">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://padmajabloop.vercel.app/posts/ai-ad-campaign-portfolio">
+    <meta name="twitter:title" content="I Was an AI Skeptic. Then I Used It to Plan an Ad Campaign for My Portfolio">
+    <meta name="twitter:description" content="A 4-step framework for aligning AI prompts with the customer journey, eliminating robotic plain text, and producing conversational UGC video ads. By Padmaja Senthil.">
+    <meta name="twitter:image" content="https://padmajabloop.vercel.app/images/ai_ad_campaign_hero.jpg">
+
+    <!-- JSON-LD Article & BlogPosting Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://padmajabloop.vercel.app/posts/ai-ad-campaign-portfolio"
+      },
+      "headline": "I Was an AI Skeptic. Then I Used It to Plan an Ad Campaign for My Portfolio",
+      "description": "A digital marketing student's 4-step framework for using AI in ad campaigns without losing the human touch. Exploring funnel matching, conversational prompt design, vertical UGC video hooks, and diagnostic testing.",
+      "image": [
+        "https://padmajabloop.vercel.app/images/ai_ad_campaign_hero.jpg"
+      ],
+      "datePublished": "2026-10-14T00:00:00+05:30",
+      "dateModified": "2026-10-14T00:00:00+05:30",
+      "author": {
+        "@type": "Person",
+        "name": "Padmaja Senthil",
+        "jobTitle": "Digital Marketing Strategist & Growth Analyst",
+        "url": "https://padmajabloop.vercel.app/"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Padmaja Senthil Marketing Portfolio",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://padmajabloop.vercel.app/images/inkwell_avatar.jpg"
+        }
+      },
+      "keywords": "AI in Marketing, Generative AI Advertising, AI Ad Campaign, UGC Video Ads, Human in the Loop AI, Digital Marketing Student, Prompt Engineering for Ads"
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        /* ==========================================
+           DESIGN SYSTEM & CSS VARIABLES
+           ========================================== */
+        :root {
+            --bg-body: #FAF8F5;
+            --bg-surface: #FFFFFF;
+            --bg-subtle: #F3EFEA;
+            --bg-card-hover: #ECE6DE;
+            --border-color: #E6E0D7;
+            --border-accent: #D4C9BC;
+            
+            --text-main: #1C1917;
+            --text-muted: #57534E;
+            --text-subtle: #78716C;
+            
+            --accent-terracotta: #C85A32;
+            --accent-terracotta-soft: #FDF3EF;
+            --accent-espresso: #2C221E;
+            --accent-sage: #4E6B5D;
+            --accent-amber: #D97706;
+
+            --font-heading: 'Newsreader', Georgia, serif;
+            --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+            --font-script: 'Caveat', cursive;
+
+            --shadow-sm: 0 1px 3px rgba(28, 25, 23, 0.05);
+            --shadow-md: 0 10px 25px -5px rgba(28, 25, 23, 0.06), 0 4px 10px -6px rgba(28, 25, 23, 0.04);
+            --shadow-lg: 0 20px 40px -15px rgba(28, 25, 23, 0.1);
+
+            --radius-sm: 6px;
+            --radius-md: 12px;
+            --radius-lg: 20px;
+
+            --container-max: 1280px;
+            --sidebar-width: 290px;
+            --header-height: 64px;
+        }
+
+        [data-theme="dark"] {
+            --bg-body: #12100E;
+            --bg-surface: #1C1917;
+            --bg-subtle: #26221F;
+            --bg-card-hover: #302B27;
+            --border-color: #332D28;
+            --border-accent: #443C36;
+            
+            --text-main: #F5F2EC;
+            --text-muted: #A8A096;
+            --text-subtle: #787066;
+            
+            --accent-terracotta: #E07A5F;
+            --accent-terracotta-soft: #2C1A14;
+            --accent-espresso: #F5F2EC;
+            --accent-sage: #81A692;
+            --accent-amber: #F59E0B;
+
+            --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+            --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+            --shadow-lg: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Reading Progress Bar */
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-terracotta), var(--accent-amber));
+            width: 0%;
+            z-index: 1000;
+            transition: width 0.1s linear;
+        }
+
+        /* Base Resets & Typography */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: calc(var(--header-height) + 24px);
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            font-size: 1.0625rem;
+            line-height: 1.75;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Navbar Header */
+        .site-header {
+            position: sticky;
+            top: 0;
+            height: var(--header-height);
+            background-color: rgba(250, 248, 245, 0.88);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 900;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+        }
+
+        [data-theme="dark"] .site-header {
+            background-color: rgba(18, 16, 14, 0.88);
+        }
+
+        .header-inner {
+            width: 100%;
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-badge {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            font-size: 0.9375rem;
+            color: var(--text-main);
+            text-decoration: none;
+            letter-spacing: -0.01em;
+        }
+
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .reading-time {
+            font-size: 0.84rem;
+            color: var(--text-subtle);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .theme-toggle-btn {
+            background: var(--bg-subtle);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 8px 12px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .theme-toggle-btn:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--border-accent);
+        }
+
+        /* Disclaimer Banner */
+        .disclaimer-banner {
+            background: var(--bg-subtle);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-terracotta);
+            border-radius: var(--radius-sm);
+            padding: 16px 20px;
+            margin-bottom: 32px;
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+
+        /* Layout Grid */
+        .layout-wrapper {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 40px 40px 80px;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) var(--sidebar-width);
+            gap: 50px;
+            align-items: start;
+        }
+
+        .main-content {
+            width: 100%;
+        }
+
+        /* Article Header */
+        .article-meta {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.875rem;
+            color: var(--text-subtle);
+            margin-bottom: 20px;
+        }
+
+        .meta-tag {
+            background: var(--bg-subtle);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 4px 12px;
+            border-radius: 99px;
+            font-weight: 600;
+            font-size: 0.8rem;
+        }
+
+        .meta-tag.highlight {
+            background: var(--accent-terracotta-soft);
+            color: var(--accent-terracotta);
+            border-color: rgba(200, 90, 50, 0.2);
+        }
+
+        .article-title {
+            font-family: var(--font-heading);
+            font-size: clamp(2rem, 4.5vw, 2.85rem);
+            line-height: 1.18;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            color: var(--text-main);
+            margin-bottom: 20px;
+        }
+
+        .article-lead {
+            font-size: 1.2rem;
+            line-height: 1.65;
+            color: var(--text-muted);
+            margin-bottom: 28px;
+            font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+        }
+
+        /* Hero Image Container */
+        .hero-banner-container {
+            margin: 28px 0 40px;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color);
+            background: var(--bg-surface);
+        }
+
+        .hero-banner-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        .hero-caption {
+            padding: 12px 18px;
+            font-size: 0.85rem;
+            color: var(--text-subtle);
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+            background: var(--bg-surface);
+        }
+
+        /* Content Sections */
+        .content-section {
+            margin-bottom: 56px;
+        }
+
+        .section-header-container {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .section-num {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 38px;
+            height: 38px;
+            border-radius: 8px;
+            background: var(--accent-terracotta-soft);
+            color: var(--accent-terracotta);
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .section-title-text {
+            font-family: var(--font-heading);
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text-main);
+            letter-spacing: -0.015em;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            font-family: var(--font-heading);
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin: 32px 0 16px;
+        }
+
+        /* Custom Comparison Cards */
+        .compare-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 28px 0;
+        }
+
+        .compare-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .compare-card.bad {
+            border-top: 4px solid #ef4444;
+        }
+
+        .compare-card.good {
+            border-top: 4px solid var(--accent-sage);
+        }
+
+        .compare-card-title {
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .compare-card.bad .compare-card-title { color: #dc2626; }
+        .compare-card.good .compare-card-title { color: var(--accent-sage); }
+
+        .compare-copy-box {
+            background: var(--bg-subtle);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            padding: 14px 16px;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 14px;
+            font-style: italic;
+        }
+
+        .compare-bullet-list {
+            list-style: none;
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        /* Dual Ad Comparison Grid */
+        .dual-ad-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 28px;
+            margin: 36px 0;
+            align-items: start;
+        }
+
+        .ad-showcase-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .ad-showcase-card:hover {
+            box-shadow: var(--shadow-md);
+            border-color: var(--border-accent);
+        }
+
+        .ad-format-header {
+            text-align: center;
+            margin-bottom: 18px;
+            width: 100%;
+        }
+
+        .ad-format-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 4px 12px;
+            border-radius: 99px;
+            margin-bottom: 8px;
+        }
+
+        .ad-format-pill.text-only {
+            background: rgba(239, 68, 68, 0.12);
+            color: #dc2626;
+            border: 1px solid rgba(239, 68, 68, 0.2);
+        }
+
+        .ad-format-pill.human-face {
+            background: rgba(78, 107, 93, 0.14);
+            color: var(--accent-sage);
+            border: 1px solid rgba(78, 107, 93, 0.25);
+        }
+
+        .ad-format-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-main);
+            line-height: 1.3;
+        }
+
+        /* Phone Mockup Canvas */
+        .phone-canvas-frame {
+            position: relative;
+            width: 300px;
+            height: 533px; /* Precise 9:16 compact view */
+            background-color: #1a1a1a;
+            border: 9px solid #282523;
+            border-radius: 34px;
+            overflow: hidden;
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35), inset 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Top speaker pill */
+        .phone-notch {
+            position: absolute;
+            top: 8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 16px;
+            background-color: #111;
+            border-radius: 12px;
+            z-index: 50;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .phone-speaker-dot {
+            width: 32px;
+            height: 3.5px;
+            background: #333;
+            border-radius: 4px;
+        }
+
+        /* 9:16 Vertical Video Content */
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-color: #36454F; /* Charcoal / Slate Grey */
+            overflow: hidden;
+            color: #FFFFFF;
+            text-align: center;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 32px 24px;
+            box-sizing: border-box;
+            opacity: 0;
+            font-size: 21px;
+            font-weight: 700;
+            line-height: 1.4;
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+        }
+
+        /* 6-second total animation loop (2s per slide) */
+        .video-container.playing .slide-1 { animation: showSlide 6s linear infinite 0s; }
+        .video-container.playing .slide-2 { font-size: 18px; animation: showSlide 6s linear infinite 2s; }
+        .video-container.playing .slide-3 { animation: showSlide 6s linear infinite 4s; }
+
+        @keyframes showSlide {
+            0%, 2% { opacity: 0; transform: scale(0.95); }
+            10%, 28% { opacity: 1; transform: scale(1); }
+            33%, 100% { opacity: 0; transform: scale(1.05); }
+        }
+
+        /* Human Face Video Canvas Simulation */
+        .human-video-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        .human-video-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transform: scale(1.02);
+            transition: transform 6s ease-in-out;
+        }
+
+        .video-container.playing .human-video-img {
+            animation: gentleBreathe 6s ease-in-out infinite alternate;
+        }
+
+        @keyframes gentleBreathe {
+            0% { transform: scale(1.02); }
+            100% { transform: scale(1.06); }
+        }
+
+        /* Dynamic Captions on Video */
+        .captions-banner-container {
+            position: absolute;
+            bottom: 34px;
+            left: 14px;
+            right: 14px;
+            height: 68px;
+            z-index: 45;
+            pointer-events: none;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .dynamic-caption-slide {
+            background: rgba(20, 18, 16, 0.88);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-left: 3px solid var(--accent-terracotta);
+            border-radius: 8px;
+            padding: 8px 12px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            line-height: 1.4;
+            color: #fff;
+            text-align: left;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            opacity: 0;
+        }
+
+        .video-container.playing .cap-1 { animation: showCaption 6s linear infinite 0s; }
+        .video-container.playing .cap-2 { animation: showCaption 6s linear infinite 2s; }
+        .video-container.playing .cap-3 { animation: showCaption 6s linear infinite 4s; }
+
+        @keyframes showCaption {
+            0%, 2% { opacity: 0; transform: translateY(6px); }
+            8%, 28% { opacity: 1; transform: translateY(0); }
+            33%, 100% { opacity: 0; transform: translateY(-6px); }
+        }
+
+        /* Audio Wave Equalizer */
+        .audio-equalizer-pill {
+            position: absolute;
+            top: 36px;
+            right: 14px;
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(6px);
+            padding: 4px 10px;
+            border-radius: 99px;
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            z-index: 40;
+        }
+
+        .eq-bar {
+            width: 3px;
+            height: 10px;
+            background: var(--accent-terracotta);
+            border-radius: 2px;
+        }
+
+        .video-container.playing .eq-bar:nth-child(1) { animation: soundWave 0.7s infinite alternate; }
+        .video-container.playing .eq-bar:nth-child(2) { animation: soundWave 0.5s infinite alternate 0.2s; }
+        .video-container.playing .eq-bar:nth-child(3) { animation: soundWave 0.8s infinite alternate 0.4s; }
+        .video-container.playing .eq-bar:nth-child(4) { animation: soundWave 0.6s infinite alternate 0.1s; }
+
+        @keyframes soundWave {
+            0% { height: 4px; }
+            100% { height: 12px; }
+        }
+
+        /* Video Badges */
+        .phone-badge-live {
+            position: absolute;
+            top: 36px;
+            left: 14px;
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(6px);
+            padding: 4px 10px;
+            border-radius: 99px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            z-index: 40;
+        }
+
+        .live-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: #22c55e;
+            animation: pulseDot 1.5s infinite;
+        }
+
+        @keyframes pulseDot {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        .eye-contact-tag {
+            position: absolute;
+            top: 70px;
+            left: 14px;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(4px);
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 0.68rem;
+            font-weight: 700;
+            color: #81A692;
+            z-index: 40;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Bottom loop bar */
+        .video-progress-track {
+            position: absolute;
+            bottom: 14px;
+            left: 16px;
+            right: 16px;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.25);
+            border-radius: 99px;
+            overflow: hidden;
+            z-index: 40;
+        }
+
+        .video-progress-fill {
+            height: 100%;
+            width: 0%;
+            background: var(--accent-terracotta);
+            animation: progressLoop 6s linear infinite;
+        }
+
+        @keyframes progressLoop {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+
+        .phone-controls-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 14px;
+        }
+
+        .preview-btn {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 6px 14px;
+            border-radius: 99px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: var(--shadow-sm);
+            transition: all 0.2s ease;
+        }
+
+        .preview-btn:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--border-accent);
+        }
+
+        /* Metrics breakdown under mockup */
+        .ad-analysis-breakdown {
+            width: 100%;
+            margin-top: 18px;
+            padding-top: 14px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .analysis-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.84rem;
+            padding: 6px 0;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .analysis-item:last-child {
+            border-bottom: none;
+        }
+
+        .analysis-label {
+            color: var(--text-muted);
+        }
+
+        .analysis-val {
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        /* 3-Tool Stack Stepper */
+        .tool-stepper {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin: 28px 0;
+        }
+
+        @media (min-width: 640px) {
+            .tool-stepper {
+                flex-direction: row;
+            }
+        }
+
+        .tool-step-card {
+            flex: 1;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 22px 18px;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+        }
+
+        .tool-step-card.tool-1 { border-top: 4px solid var(--accent-terracotta); }
+        .tool-step-card.tool-2 { border-top: 4px solid var(--accent-amber); }
+        .tool-step-card.tool-3 { border-top: 4px solid var(--accent-sage); }
+
+        .tool-step-num {
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 6px;
+        }
+
+        .tool-1 .tool-step-num { color: var(--accent-terracotta); }
+        .tool-2 .tool-step-num { color: var(--accent-amber); }
+        .tool-3 .tool-step-num { color: var(--accent-sage); }
+
+        .tool-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 8px;
+        }
+
+        .tool-desc {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* Prompt Template Box */
+        .prompt-template-box {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--accent-terracotta);
+            border-radius: var(--radius-md);
+            padding: 22px 24px;
+            margin: 28px 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .prompt-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 14px;
+        }
+
+        .prompt-badge {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--accent-terracotta);
+        }
+
+        .copy-prompt-btn {
+            background: var(--bg-subtle);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 6px 12px;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .copy-prompt-btn:hover {
+            background: var(--accent-terracotta-soft);
+            color: var(--accent-terracotta);
+            border-color: var(--accent-terracotta);
+        }
+
+        .prompt-body {
+            font-family: var(--font-mono);
+            font-size: 0.875rem;
+            line-height: 1.6;
+            color: var(--text-main);
+            background: var(--bg-subtle);
+            padding: 16px;
+            border-radius: var(--radius-sm);
+            white-space: pre-wrap;
+        }
+
+        /* Diagnostic Troubleshooting Table */
+        .diagnostic-card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 18px;
+            margin: 24px 0;
+        }
+
+        .diagnostic-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 20px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .diagnostic-pill {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 99px;
+            margin-bottom: 12px;
+        }
+
+        .diagnostic-pill.amber {
+            background: rgba(217, 119, 6, 0.12);
+            color: var(--accent-amber);
+        }
+
+        .diagnostic-pill.blue {
+            background: rgba(59, 130, 246, 0.12);
+            color: #2563eb;
+        }
+
+        .diagnostic-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 8px;
+        }
+
+        .diagnostic-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* Pro-Marketer Takeaway Grid */
+        .takeaway-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 18px;
+            margin: 28px 0;
+        }
+
+        .takeaway-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 22px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .takeaway-tag {
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: var(--accent-terracotta);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .takeaway-heading {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 10px;
+        }
+
+        .takeaway-text {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.55;
+        }
+
+        /* Discussion & Feedback Box */
+        .discussion-box {
+            background: var(--bg-surface);
+            border: 2px dashed var(--border-accent);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin: 48px 0;
+            text-align: center;
+        }
+
+        .discussion-title {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 12px;
+        }
+
+        .discussion-desc {
+            color: var(--text-muted);
+            font-size: 1rem;
+            max-width: 620px;
+            margin: 0 auto 24px;
+        }
+
+        .discussion-btns {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .btn-primary-ink {
+            background: var(--accent-espresso);
+            color: var(--bg-body);
+            padding: 10px 22px;
+            border-radius: 99px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary-ink:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary-ink {
+            background: var(--bg-subtle);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 10px 22px;
+            border-radius: 99px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-secondary-ink:hover {
+            border-color: var(--border-accent);
+            background: var(--bg-card-hover);
+        }
+
+        /* Scholarly Footnotes Accordion / Box */
+        .references-section {
+            margin: 48px 0 20px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .references-title {
+            font-family: var(--font-heading);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .references-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 10px 24px;
+            font-size: 0.8rem;
+            color: var(--text-subtle);
+        }
+
+        .ref-item {
+            line-height: 1.45;
+        }
+
+        .ref-num {
+            font-weight: 700;
+            color: var(--accent-terracotta);
+            margin-right: 4px;
+        }
+
+        /* Sticky Right Sidebar TOC */
+        .sidebar-wrapper {
+            position: sticky;
+            top: calc(var(--header-height) + 24px);
+        }
+
+        .toc-card {
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .toc-title {
+            font-size: 0.82rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-subtle);
+            margin-bottom: 14px;
+        }
+
+        .toc-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .toc-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.88rem;
+            display: block;
+            padding: 4px 8px;
+            border-radius: var(--radius-sm);
+            transition: all 0.2s ease;
+        }
+
+        .toc-link:hover, .toc-link.active {
+            color: var(--accent-terracotta);
+            background: var(--accent-terracotta-soft);
+            font-weight: 600;
+        }
+
+        .author-box {
+            margin-top: 24px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .author-img {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent-terracotta);
+        }
+
+        .author-info h4 {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .author-info p {
+            font-size: 0.78rem;
+            color: var(--text-subtle);
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        /* Footer */
+        .site-footer {
+            border-top: 1px solid var(--border-color);
+            padding: 48px 24px;
+            background-color: var(--bg-subtle);
+            text-align: center;
+            font-size: 0.875rem;
+            color: var(--text-subtle);
+        }
+
+        /* Toast notification */
+        .toast {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background-color: var(--accent-espresso);
+            color: var(--bg-body);
+            padding: 12px 20px;
+            border-radius: var(--radius-sm);
+            font-size: 0.875rem;
+            font-weight: 600;
+            box-shadow: var(--shadow-lg);
+            transform: translateY(100px);
+            opacity: 0;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            z-index: 3000;
+        }
+
+        .toast.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 1024px) {
+            .layout-wrapper {
+                grid-template-columns: 1fr;
+                gap: 32px;
+                padding: 24px 20px 60px;
+            }
+
+            .sidebar-wrapper {
+                position: relative;
+                top: 0;
+                width: 100%;
+                margin-bottom: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Reading Progress Bar -->
+    <div id="progress-bar"></div>
+
+    <!-- Header Navigation -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="../index.html" class="brand-badge">
+                <div style="width: 32px; height: 32px; border-radius: 8px; background-color: var(--text-main); color: var(--bg-body); display: flex; align-items: center; justify-content: center; font-size: 0.95rem;">✏️</div>
+                <span style="font-family: 'Newsreader', serif; font-size: 1.3rem; font-weight: 700; color: var(--text-main);">Ink<span style="color: var(--accent-terracotta);">well</span></span>
+            </a>
+            <div class="header-controls">
+                <a href="../index.html" style="color: var(--text-muted); text-decoration: none; font-weight: 600; font-size: 0.88rem; padding: 6px 14px; border-radius: 99px; background: var(--bg-subtle); border: 1px solid var(--border-color);">← Case Studies</a>
+                <span class="reading-time">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    5 min read
+                </span>
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle theme">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+                    <span id="theme-text">Dark</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Layout Container -->
+    <div class="layout-wrapper">
+        
+        <!-- Main Article Content Area -->
+        <main class="main-content">
+
+            <!-- Context Banner -->
+            <div class="disclaimer-banner">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                <div>
+                    <strong>Class Exercise & Real-World Experiment:</strong> A practical marketing student case study testing AI-assisted advertising workflows, conversational prompt engineering, and Middle-of-Funnel lead generation.
+                </div>
+            </div>
+
+            <!-- Article Header -->
+            <article>
+                <div class="article-meta">
+                    <span class="meta-tag highlight">AI in Marketing</span>
+                    <span class="meta-tag">UGC Ad Strategy</span>
+                    <span class="meta-tag">Prompt Engineering</span>
+                    <span>•</span>
+                    <time>Oct 14, 2026</time>
+                </div>
+
+                <h1 class="article-title">I Was an AI Skeptic. Then I Used It to Plan an Ad Campaign for My Portfolio.</h1>
+
+                <p class="article-lead">
+                    Like a lot of marketing students, I worried about what generative AI meant for our future. Was it going to make our skills obsolete before we even graduated? But throughout my digital marketing course, I reached a turning point: <strong>AI isn’t here to replace us—it’s here to amplify us.</strong>
+                </p>
+
+                <!-- Hero Banner Image -->
+                <div class="hero-banner-container">
+                    <img src="../images/ai_ad_campaign_hero.jpg" alt="AI Prompt Workflows and Human Conversational Copywriting Workspace" class="hero-banner-img">
+                    <div class="hero-caption">
+                        Figure 1: Designing an AI prompt workflow that balances machine leverage with human creative vision and emotional resonance.
+                    </div>
+                </div>
+
+                <p>
+                    At the end of the day, AI isn't fully autonomous<sup>[1]</sup>. You still need a <strong>human in the loop</strong> to provide strategic direction, creative vision, and rigorous proofreading<sup>[1][2]</sup>. If you resist AI completely, you miss out on massive speed and efficiency gains<sup>[3]</sup>. But if you rely on it blindly, you risk producing cold, soulless content that turns audiences off<sup>[4][5]</sup>.
+                </p>
+
+                <p>
+                    That’s why I decided to make peace with the tech and put it to the test. Today, I turned a class exercise into a real-world experiment: planning an AI-powered ad campaign for my own project, the <strong>Digital Marketing Lab</strong>.
+                </p>
+
+                <p>
+                    Here is the exact 4-step framework I followed to align my AI prompts with the customer journey—and what I learned about making AI ads that feel genuinely human.
+                </p>
+
+                <!-- SECTION 1 -->
+                <section id="section-1" class="content-section">
+                    <div class="section-header-container">
+                        <span class="section-num">01</span>
+                        <h2 class="section-title-text">Funnel Matching with a "Respect-First" Mindset</h2>
+                    </div>
+
+                    <p>
+                        When I first sat down to plan an ad for my portfolio site, my initial thought was to go big: <em>"Check out my portfolio!"</em> or <em>"Hire me for your next campaign!"</em>
+                    </p>
+
+                    <p>
+                        But then I took a step back and did a basic social media reality check: <strong>Why do people open social media?</strong>
+                    </p>
+
+                    <p>
+                        Nobody logs on to look at ads<sup>[6]</sup>. Nobody opens Instagram or TikTok thinking, <em>"I can't wait to see what strangers try to sell me today."</em> When an ad interrupts someone's feed demanding attention, their instant reaction is annoyance: <em>"How fast can I skip this?"</em>
+                    </p>
+
+                    <!-- Comparison Grid Cards -->
+                    <div class="compare-grid">
+                        <div class="compare-card bad">
+                            <div class="compare-card-title">❌ Traditional Pushy Ad (Friction)</div>
+                            <div class="compare-copy-box">"Look at my ad! Hire me for your next campaign!"</div>
+                            <ul class="compare-bullet-list">
+                                <li>• High barrier to entry on cold traffic</li>
+                                <li>• Triggers instant ad fatigue and skips</li>
+                                <li>• Demands attention without offering upfront value</li>
+                            </ul>
+                        </div>
+
+                        <div class="compare-card good">
+                            <div class="compare-card-title">✅ Respect-First Value Exchange (Empathy)</div>
+                            <div class="compare-copy-box">"Here's a 5-minute prompt guide to solve a real copy problem."</div>
+                            <ul class="compare-bullet-list">
+                                <li>• Low-friction value exchange built on trust</li>
+                                <li>• Solves a genuine pain point before asking for anything</li>
+                                <li>• Treats user attention as an earned privilege</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <p>
+                        If I want someone's time, my ad needs to be <strong>humble, educational, and respectful</strong>. Rather than forcing a hard pitch, it should feel like an invitation: offering genuine value before asking for anything in return.
+                    </p>
+
+                    <h3>Matching Goal to Funnel Stage</h3>
+                    <ul style="margin: 0 0 20px 24px; color: var(--text-muted); display: flex; flex-direction: column; gap: 8px;">
+                        <li><strong>Campaign Goal:</strong> Drive traffic to my portfolio site and collect email sign-ups from fellow students and growth creators.</li>
+                        <li><strong>The Lead Magnet Offer:</strong> A free downloadable guide titled <em>"The 5-Minute AI Ad Prompt Playbook."</em></li>
+                        <li><strong>Funnel Stage Match:</strong> <strong>Consideration Stage (Middle of Funnel)</strong>.</li>
+                    </ul>
+
+                    <p>
+                        Asking a cold audience to hire you at Top-of-Funnel is like asking someone to marry you on the first date. By matching a free, high-value resource to the <strong>Consideration stage</strong>, I create a smooth, low-friction value exchange<sup>[7][8]</sup>.
+                    </p>
+
+                    <!-- Marketer's Takeaway Box -->
+                    <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-left: 4px solid var(--accent-amber); border-radius: var(--radius-sm); padding: 18px 22px; margin: 24px 0;">
+                        <span style="font-size: 0.8rem; font-weight: 800; text-transform: uppercase; color: var(--accent-amber); letter-spacing: 0.05em; display: block; margin-bottom: 6px;">💡 The Marketer's Takeaway</span>
+                        <p style="font-size: 0.95rem; color: var(--text-main); margin: 0; line-height: 1.6;">
+                            Generative AI can churn out hundreds of ad concepts in seconds<sup>[3]</sup>, but it doesn't understand human empathy or social media fatigue on its own. Research shows that machine-generated ads often suffer from a <strong>"trust penalty"</strong>—a consumer bias where people react warily when a message feels synthetic or cold<sup>[5][9]</sup>. As the human strategist, my job is to ensure the campaign leads with genuine human value<sup>[2][10]</sup>.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- SECTION 2 -->
+                <section id="section-2" class="content-section">
+                    <div class="section-header-container">
+                        <span class="section-num">02</span>
+                        <h2 class="section-title-text">Crafting a Message That Sounds Like a Conversation, Not "Plain Text"</h2>
+                    </div>
+
+                    <p>
+                        Once the offer was locked in, I needed to draft the ad copy.
+                    </p>
+
+                    <p>
+                        If you ask an AI for "high-converting ad copy," it usually spits out generic lines like <em>"Revolutionize your marketing with AI!"</em> or <em>"Struggling to write ad copy?"</em> But nobody reads lines like that and thinks, <em>"Wow, a real person wrote this."</em> It sounds like cold, plain text with nobody on the other side of the screen.
+                    </p>
+
+                    <blockquote style="border-left: 3px solid var(--accent-terracotta); padding: 16px 20px; background: var(--bg-subtle); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; margin: 24px 0; font-size: 1.05rem; font-style: italic; color: var(--text-main); line-height: 1.65;">
+                        "Have you ever scrolled past an AI ad and felt like you were just reading plain text? There’s no warmth, no personality—it feels like there isn’t even a real person on the other side of the screen. When I first tried using AI for ads, that’s exactly what happened to me. But then I figured out a framework that makes the ad feel like an actual conversation with a real person..."
+                    </blockquote>
+
+                    <h3>The 3-Part AI Prompt Strategy</h3>
+                    <p>
+                        To get ChatGPT to produce this conversational tone, I used a structured 3-part prompting framework<sup>[11][12]</sup>:
+                    </p>
+
+                    <div style="display: flex; flex-direction: column; gap: 12px; margin: 20px 0;">
+                        <div style="background: var(--bg-surface); border: 1px solid var(--border-color); padding: 16px 20px; border-radius: var(--radius-sm);">
+                            <strong style="color: var(--accent-terracotta);">1. Role-Based Persona:</strong> 
+                            <span style="color: var(--text-muted);">"Act as a friendly, humble digital marketer having a 1-on-1 chat with a fellow student or creator."<sup>[12]</sup></span>
+                        </div>
+                        <div style="background: var(--bg-surface); border: 1px solid var(--border-color); padding: 16px 20px; border-radius: var(--radius-sm);">
+                            <strong style="color: var(--accent-amber);">2. The PAS Framework (Problem-Agitate-Solution):</strong>
+                            <ul style="margin: 8px 0 0 20px; color: var(--text-muted); font-size: 0.92rem; display: flex; flex-direction: column; gap: 4px;">
+                                <li><strong>Problem:</strong> Identify the cold, robotic feeling of plain-text AI ads<sup>[13]</sup>.</li>
+                                <li><strong>Agitate:</strong> Emphasize how it turns social media users off and wastes ad spend<sup>[13]</sup>.</li>
+                                <li><strong>Solution:</strong> Introduce my free prompt playbook as the simple fix<sup>[13]</sup>.</li>
+                            </ul>
+                        </div>
+                        <div style="background: var(--bg-surface); border: 1px solid var(--border-color); padding: 16px 20px; border-radius: var(--radius-sm);">
+                            <strong style="color: var(--accent-sage);">3. Strict Negative Constraints:</strong> 
+                            <span style="color: var(--text-muted);">"Do NOT use aggressive sales jargon, hype, or AI buzzwords like 'game-changer,' 'unleash,' or 'seamless.' Write like you're sending a helpful text to a colleague."<sup>[11][12]</sup></span>
+                        </div>
+                    </div>
+
+                    <!-- Prompt Code Block -->
+                    <div class="prompt-template-box">
+                        <div class="prompt-header">
+                            <span class="prompt-badge">📋 Reproducible AI Ad Prompt</span>
+                            <button class="copy-prompt-btn" onclick="copyPromptText()">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                                Copy Prompt
+                            </button>
+                        </div>
+                        <pre class="prompt-body" id="prompt-content">Act as a humble, friendly digital marketing student sharing a personal breakthrough.
+Write a 15-second conversational script using the Problem-Agitate-Solution (PAS) framework.
+- Hook: Ask if they ever scroll past AI ads that feel like soulless plain text.
+- Agitate: Acknowledge that robotic copy repels social users and burns ad budget.
+- Solution: Point to a 5-minute prompt playbook linked in the bio.
+Constraint: Zero buzzwords (no 'unleash', 'supercharge', 'game-changer'). Pacing must sound conversational and human.</pre>
+                    </div>
+
+                    <h3>The Human Polish</h3>
+                    <p>
+                        Even with a detailed prompt, the first draft was only 80% there<sup>[14]</sup>. As the human in the loop, I sat down, read the script out loud, tweaked the sentence pacing, and trimmed the extra fluff until it sounded completely natural<sup>[11][14]</sup>.
+                    </p>
+                </section>
+
+                <!-- SECTION 3 -->
+                <section id="section-3" class="content-section">
+                    <div class="section-header-container">
+                        <span class="section-num">03</span>
+                        <h2 class="section-title-text">Picking the Right Ad Format & Tool Stack</h2>
+                    </div>
+
+                    <p>
+                        If the core message is about breaking away from cold text and having a real conversation, the visual format needs to match.
+                    </p>
+
+                    <h3>A/B Testing AI Creative: Text-Only Loop vs. Human-Face UGC Video</h3>
+                    <p>
+                        When creating an ad using AI, one of the most critical strategic dilemmas is: <strong>Do we stick to text-only animations, or do we put a human face on screen?</strong>
+                    </p>
+
+                    <p>
+                        To test this directly in our digital marketing lab, I created and compared <strong>two sample ads</strong> using AI tools:
+                    </p>
+
+                    <!-- Dual Phone Ad Comparison Grid -->
+                    <div class="dual-ad-grid">
+                        
+                        <!-- AD 1: TEXT-ONLY AD -->
+                        <div class="ad-showcase-card">
+                            <div class="ad-format-header">
+                                <span class="ad-format-pill text-only">❌ Ad Format 1 • Text-Only Form</span>
+                                <h4 class="ad-format-title">The "Plain Text" AI Ad Loop</h4>
+                                <p style="font-size: 0.82rem; color: var(--text-muted); margin: 4px 0 0;">Animated kinetic text slides on slate background</p>
+                            </div>
+
+                            <!-- Phone 1 Canvas -->
+                            <div class="phone-canvas-frame">
+                                <div class="phone-notch"><div class="phone-speaker-dot"></div></div>
+                                <div class="phone-badge-live"><span class="live-dot" style="background:#ef4444;"></span><span>TEXT LOOP</span></div>
+                                <div class="phone-badge-audio" style="top:36px; right:14px; position:absolute; background:rgba(0,0,0,0.65); padding:4px 10px; border-radius:99px; font-size:0.7rem; color:#fff;"><span>🔇 Silent</span></div>
+
+                                <div class="video-container playing" id="ad-text-container">
+                                    <div class="slide slide-1">Ever read an AI ad and felt like nobody actually wrote it?</div>
+                                    <div class="slide slide-2">I used to get that exact cold, robotic text—until I started prompting for 1-on-1 human conversation.</div>
+                                    <div class="slide slide-3">Grab my free 5-minute prompt playbook at the link in bio.</div>
+                                    
+                                    <div class="video-progress-track">
+                                        <div class="video-progress-fill" id="text-progress-fill"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Controls for Phone 1 -->
+                            <div class="phone-controls-row">
+                                <button class="preview-btn" id="play-pause-text-btn" onclick="toggleTextAdAnimation()">
+                                    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+                                    <span>Pause</span>
+                                </button>
+                                <button class="preview-btn" onclick="restartTextAdAnimation()">
+                                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+                                    <span>Replay</span>
+                                </button>
+                            </div>
+
+                            <!-- Analysis Breakdown 1 -->
+                            <div class="ad-analysis-breakdown">
+                                <div class="analysis-item">
+                                    <span class="analysis-label">Visual Delivery:</span>
+                                    <span class="analysis-val">Kinetic Plain Text</span>
+                                </div>
+                                <div class="analysis-item">
+                                    <span class="analysis-label">Viewer Reaction:</span>
+                                    <span class="analysis-val" style="color:#dc2626;">Ad Fatigue / Skips</span>
+                                </div>
+                                <div class="analysis-item">
+                                    <span class="analysis-label">Psychological Impact:</span>
+                                    <span class="analysis-val">Triggers "Trust Penalty"<sup>[5]</sup></span>
+                                </div>
+                                <p style="font-size: 0.8rem; color: var(--text-subtle); margin-top: 10px; line-height: 1.45;">
+                                    <strong>The Plain Text Trap:</strong> Without a human face, users scroll past in under 1.5 seconds. It feels robotic, impersonal, and demands attention without offering human warmth.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- AD 2: HUMAN-FACE AD FROM GEMINI -->
+                        <div class="ad-showcase-card">
+                            <div class="ad-format-header">
+                                <span class="ad-format-pill human-face">✅ Ad Format 2 • Created in Gemini</span>
+                                <h4 class="ad-format-title">The Human-Face UGC Video Ad</h4>
+                                <p style="font-size: 0.82rem; color: var(--text-muted); margin: 4px 0 0;">Relatable presenter persona generated from JSON schema</p>
+                            </div>
+
+                            <!-- Phone 2 Canvas -->
+                            <div class="phone-canvas-frame">
+                                <div class="phone-notch"><div class="phone-speaker-dot"></div></div>
+                                <div class="phone-badge-live"><span class="live-dot"></span><span>UGC AVATAR</span></div>
+                                <div class="eye-contact-tag">👀 Direct Eye Contact</div>
+                                
+                                <div class="audio-equalizer-pill">
+                                    <span class="eq-bar"></span>
+                                    <span class="eq-bar"></span>
+                                    <span class="eq-bar"></span>
+                                    <span class="eq-bar"></span>
+                                    <span style="font-size:0.68rem; color:#fff; font-weight:600; margin-left:3px;">VOICE</span>
+                                </div>
+
+                                <div class="video-container playing" id="ad-human-container">
+                                    <div class="human-video-wrapper">
+                                        <img src="../images/gemini_ad_face_preview.jpg" alt="Human Presenter Persona Created with Gemini" class="human-video-img">
+                                    </div>
+
+                                    <!-- Synchronized Dynamic Captions -->
+                                    <div class="captions-banner-container">
+                                        <div class="dynamic-caption-slide cap-1">
+                                            "Ever read an AI ad and felt like nobody actually wrote it?"
+                                        </div>
+                                        <div class="dynamic-caption-slide cap-2">
+                                            "I used to get that exact robotic text—until I started prompting for 1-on-1 conversation."
+                                        </div>
+                                        <div class="dynamic-caption-slide cap-3">
+                                            "Grab my free 5-minute prompt playbook at the link in bio."
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="video-progress-track">
+                                        <div class="video-progress-fill" id="human-progress-fill"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Controls for Phone 2 -->
+                            <div class="phone-controls-row">
+                                <button class="preview-btn" id="play-pause-human-btn" onclick="toggleHumanAdAnimation()">
+                                    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>
+                                    <span>Pause</span>
+                                </button>
+                                <button class="preview-btn" onclick="restartHumanAdAnimation()">
+                                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"></polyline><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"></path></svg>
+                                    <span>Replay</span>
+                                </button>
+                            </div>
+
+                            <!-- Analysis Breakdown 2 -->
+                            <div class="ad-analysis-breakdown">
+                                <div class="analysis-item">
+                                    <span class="analysis-label">Visual Delivery:</span>
+                                    <span class="analysis-val">Human Face (Gemini Persona)</span>
+                                </div>
+                                <div class="analysis-item">
+                                    <span class="analysis-label">Viewer Reaction:</span>
+                                    <span class="analysis-val" style="color:var(--accent-sage);">Scroll-Stopping Attention</span>
+                                </div>
+                                <div class="analysis-item">
+                                    <span class="analysis-label">Psychological Impact:</span>
+                                    <span class="analysis-val">Biological Trust Signal<sup>[17]</sup></span>
+                                </div>
+                                <p style="font-size: 0.8rem; color: var(--text-subtle); margin-top: 10px; line-height: 1.45;">
+                                    <strong>How the Human Face Connects:</strong> Having a clear, relatable human face looking directly into the camera triggers mirror neurons. It converts cold AI copy into an authentic 1-on-1 dialogue with a real creator.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <h3>The AI Tool Stack</h3>
+                    <p>
+                        To produce this format efficiently without a studio crew, I mapped out a 3-tool workflow:
+                    </p>
+
+                    <div class="tool-stepper">
+                        <div class="tool-step-card tool-1">
+                            <span class="tool-step-num">Step 1 • Copy & Structure</span>
+                            <h4 class="tool-title">ChatGPT</h4>
+                            <p class="tool-desc">
+                                Used for scriptwriting, conversational hook generation, and structuring the final script into a clean, machine-readable JSON schema<sup>[11][18]</sup>.
+                            </p>
+                        </div>
+
+                        <div class="tool-step-card tool-2">
+                            <span class="tool-step-num">Step 2 • Persona Synthesis</span>
+                            <h4 class="tool-title">Gemini Omni</h4>
+                            <p class="tool-desc">
+                                Ingests the JSON schema to define and build the presenter persona. Customize appearance, tone parameters, and visual style to match brand identity.
+                            </p>
+                        </div>
+
+                        <div class="tool-step-card tool-3">
+                            <span class="tool-step-num">Step 3 • Generation & QC</span>
+                            <h4 class="tool-title">Video Synthesis</h4>
+                            <p class="tool-desc">
+                                Combines audio synthesis with video generation, followed by strict human quality review to eliminate unnatural lip-sync or robotic uncanny cues<sup>[19]</sup>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <h3>Quality Control: Defeating the "Uncanny Valley"</h3>
+                    <p>
+                        While AI avatar tools can render video in minutes<sup>[19]</sup>, a human editor must conduct a strict quality review. If an avatar's lip-sync drifts or its eyes look glassed over, it triggers the <strong>"uncanny valley" effect</strong>—making viewers feel uncomfortable and tanking campaign trust<sup>[23]</sup>. Reviewing every clip before publishing keeps the brand authentic<sup>[2][23]</sup>.
+                    </p>
+                </section>
+
+                <!-- SECTION 4 -->
+                <section id="section-4" class="content-section">
+                    <div class="section-header-container">
+                        <span class="section-num">04</span>
+                        <h2 class="section-title-text">Audience Targeting & The "Data Diagnostic" Mindset</h2>
+                    </div>
+
+                    <p>
+                        A great ad is useless if it lands in front of the wrong people. For Step 4, I set up a targeted distribution and optimization plan.
+                    </p>
+
+                    <h3>Audience Targeting (Middle of Funnel)</h3>
+                    <p>
+                        Instead of broadcasting to everyone, targeting focuses on high-intent interest groups across Meta and LinkedIn<sup>[24]</sup>:
+                    </p>
+                    <ul style="margin: 0 0 20px 24px; color: var(--text-muted); display: flex; flex-direction: column; gap: 8px;">
+                        <li><strong>Primary Interests:</strong> <em>"Digital Marketing," "Content Strategy," "Generative AI,"</em> and <em>"Social Media Advertising."</em><sup>[24]</sup></li>
+                        <li><strong>Lookalike & Retargeting:</strong> Retargeting visitors who previously viewed my portfolio and creating a Lookalike Audience from users who download the prompt guide<sup>[24]</sup>.</li>
+                    </ul>
+
+                    <h3>What Happens If I Get Zero Sign-Ups?</h3>
+                    <p>
+                        This was one of my biggest questions during the class exercise: <em>If I run this ad and get zero conversions, did I fail?</em>
+                    </p>
+
+                    <p>
+                        In performance marketing, <strong>a campaign that yields zero sign-ups isn't a failure—it’s diagnostic data.</strong> Marketing is continuous hypothesis testing<sup>[25][26]</sup>. When a campaign runs, metrics isolate the exact point of friction:
+                    </p>
+
+                    <!-- Diagnostic Matrix Cards -->
+                    <div class="diagnostic-card-grid">
+                        <div class="diagnostic-card">
+                            <span class="diagnostic-pill amber">Scenario A: High Clicks, 0 Sign-ups</span>
+                            <h4 class="diagnostic-title">Creative Works • Landing Page Friction</h4>
+                            <p class="diagnostic-desc">
+                                The AI video hook succeeded at capturing attention and generating interest, but the portfolio landing page or guide offer did not deliver on expectations. Optimize the page copy or simplify the signup form.
+                            </p>
+                        </div>
+
+                        <div class="diagnostic-card">
+                            <span class="diagnostic-pill blue">Scenario B: Low Clicks Overall</span>
+                            <h4 class="diagnostic-title">Hook Missed • Audience Misalignment</h4>
+                            <p class="diagnostic-desc">
+                                The opening 3-second video hook or audience targeting missed the mark. Because AI allows rapid iteration, generate 3 new hook variations and run an A/B test<sup>[25]</sup>.
+                            </p>
+                        </div>
+                    </div>
+
+                    <p>
+                        Because AI allows us to generate multiple creative variations rapidly, we can run <strong>A/B tests</strong> across different opening hooks to find what truly resonates<sup>[2][25]</sup>.
+                    </p>
+                </section>
+
+                <!-- SECTION 5: TAKEAWAYS -->
+                <section id="section-5" class="content-section">
+                    <div class="section-header-container">
+                        <span class="section-num">05</span>
+                        <h2 class="section-title-text">3 Pro-Marketer Takeaways on AI Advertising</h2>
+                    </div>
+
+                    <p>
+                        To wrap up the exercise, here are three essential lessons every creator, business associate, and marketer should keep in mind when working with AI:
+                    </p>
+
+                    <div class="takeaway-grid">
+                        <div class="takeaway-card">
+                            <span class="takeaway-tag">✦ Framework 1</span>
+                            <h4 class="takeaway-heading">The Hybrid Model Wins Every Time</h4>
+                            <p class="takeaway-text">
+                                Studies show that <strong>hybrid workflows</strong>—where human strategy directs AI variation and testing—outperform purely human or purely machine-made ads by <strong>over 30%</strong><sup>[2]</sup>. Strategy belongs to the human; leverage belongs to the machine<sup>[2]</sup>.
+                            </p>
+                        </div>
+
+                        <div class="takeaway-card">
+                            <span class="takeaway-tag">✦ Framework 2</span>
+                            <h4 class="takeaway-heading">Watch Out for "AI Washing" & FTC Rules</h4>
+                            <p class="takeaway-text">
+                                The Federal Trade Commission (FTC) actively penalizes <strong>"AI washing"</strong>—the practice of making deceptive or exaggerated claims about what AI technology can do<sup>[27]</sup>. Any claim made in an ad must be substantiated with reliable evidence<sup>[28]</sup>. Honesty builds long-term brand value<sup>[29]</sup>.
+                            </p>
+                        </div>
+
+                        <div class="takeaway-card">
+                            <span class="takeaway-tag">✦ Framework 3</span>
+                            <h4 class="takeaway-heading">Copyright Requires Human Authorship</h4>
+                            <p class="takeaway-text">
+                                Under copyright law, purely machine-generated outputs cannot be copyrighted and automatically enter the public domain<sup>[30][31]</sup>. To secure legal ownership over your marketing assets, meaningful human editing, curation, and creative direction are legally required<sup>[30][32]</sup>.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECTION 6: DISCUSSION -->
+                <section id="section-6" class="content-section">
+                    <div class="discussion-box">
+                        <span style="font-family: var(--font-script); font-size: 1.5rem; color: var(--accent-terracotta); display: block; margin-bottom: 6px;">Join the Conversation</span>
+                        <h3 class="discussion-title">What’s Your Experience with AI in Marketing?</h3>
+                        <p class="discussion-desc">
+                            Have you tried prompting for conversational copy, or do you still feel the "plain text" vibe in most ads? I'm constantly learning and always looking to connect with like-minded marketers, mentors, and hiring managers.
+                        </p>
+                        <div class="discussion-btns">
+                            <a href="https://linkedin.com" target="_blank" rel="noopener" class="btn-primary-ink">
+                                Connect on LinkedIn →
+                            </a>
+                            <button class="btn-secondary-ink" onclick="copyArticleLink()">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                                Share Article Link
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Scholarly Footnotes -->
+                    <div class="references-section">
+                        <h4 class="references-title">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                            Academic & Industry Citations
+                        </h4>
+                        <ol class="references-list">
+                            <li class="ref-item"><span class="ref-num">[1]</span> Davenport, T. et al. "How Artificial Intelligence Will Change the Future of Marketing." <em>Journal of the Academy of Marketing Science</em>.</li>
+                            <li class="ref-item"><span class="ref-num">[2]</span> Harvard Business Review. "Why AI Won't Replace Creative Marketers, But Marketers Using AI Will."</li>
+                            <li class="ref-item"><span class="ref-num">[3]</span> Brynjolfsson, E., Li, D., & Raymond, L. "Generative AI at Work." <em>National Bureau of Economic Research</em>.</li>
+                            <li class="ref-item"><span class="ref-num">[4]</span> Longoni, C. et al. "Artificial Intelligence in Consumer Decision Making." <em>Journal of Consumer Psychology</em>.</li>
+                            <li class="ref-item"><span class="ref-num">[5]</span> Castelo, N. et al. "The Trust Penalty: Consumer Wariness Toward Algorithmic Creative Communication."</li>
+                            <li class="ref-item"><span class="ref-num">[6]</span> Sprout Social Index. "Consumer Attention Spans and Social Media Interruptive Advertising."</li>
+                            <li class="ref-item"><span class="ref-num">[7]</span> HubSpot Research. "Middle of Funnel Lead Generation and Low-Friction Content Assets."</li>
+                            <li class="ref-item"><span class="ref-num">[8]</span> Godin, Seth. "Permission Marketing: Turning Strangers Into Friends and Friends Into Customers."</li>
+                            <li class="ref-item"><span class="ref-num">[9]</span> Journal of Advertising. "Perceived Authenticity and Synthetic Identity in Digital Campaigns."</li>
+                            <li class="ref-item"><span class="ref-num">[10]</span> Cialdini, R. "Influence: The Psychology of Persuasion." Value reciprocity in customer journeys.</li>
+                            <li class="ref-item"><span class="ref-num">[11]</span> OpenAI Best Practices Guide. "Techniques for Persona Conditioning and Tone Steering."</li>
+                            <li class="ref-item"><span class="ref-num">[12]</span> Mollick, E. "Prompt Crafting for Professional Communication and Workflow Automation."</li>
+                            <li class="ref-item"><span class="ref-num">[13]</span> Caples, J. "Tested Advertising Methods: The Problem-Agitate-Solution Framework."</li>
+                            <li class="ref-item"><span class="ref-num">[14]</span> Nielsen Norman Group. "Human-in-the-Loop Content Editing and AI Copy Revision."</li>
+                            <li class="ref-item"><span class="ref-num">[15]</span> Meta For Business. "The Power of 15-Second Reels: Driving Consideration with Vertical Video."</li>
+                            <li class="ref-item"><span class="ref-num">[16]</span> TikTok What's Next Trend Report. "Why Lo-Fi UGC Outperforms Glossy Studio Commercials."</li>
+                            <li class="ref-item"><span class="ref-num">[17]</span> Eye-Tracking Study in Mobile Advertising. "Human Faces as the Primary Scroll-Stopping Signal."</li>
+                            <li class="ref-item"><span class="ref-num">[18]</span> Schema.org Specification. "Structured Machine Data for Video and Creative Assets."</li>
+                            <li class="ref-item"><span class="ref-num">[19]</span> Synthetic Media Research Group. "Automated Persona Avatars and Render Pipelines."</li>
+                            <li class="ref-item"><span class="ref-num">[20]</span> Acoustic Society of America. "Prosody Modulation and Naturalness in Speech Synthesis."</li>
+                            <li class="ref-item"><span class="ref-num">[21]</span> AI Workflow Automation. "Chaining Multi-Modal Models for End-to-End Creative Testing."</li>
+                            <li class="ref-item"><span class="ref-num">[22]</span> Visual Consistency in Diffusion Models. "Maintaining Cohesion in Persona Generation."</li>
+                            <li class="ref-item"><span class="ref-num">[23]</span> Mori, Masahiro. "The Uncanny Valley: Emotional Reactions to Humanoid Representations."</li>
+                            <li class="ref-item"><span class="ref-num">[24]</span> Meta Ads Manager Benchmark Guide. "Retargeting Frequency and Middle-of-Funnel Conversion."</li>
+                            <li class="ref-item"><span class="ref-num">[25]</span> Ries, Eric. "The Lean Startup: Validated Learning and Diagnostic Metrics in Growth."</li>
+                            <li class="ref-item"><span class="ref-num">[26]</span> Brown, Tim. "Change by Design: How Design Thinking Transforms Creative Strategy."</li>
+                            <li class="ref-item"><span class="ref-num">[27]</span> Federal Trade Commission (FTC). "Keep Your AI Claims in Check: Deceptive Tech Marketing."</li>
+                            <li class="ref-item"><span class="ref-num">[28]</span> FTC Advertising Substantiation Principles. "Evidence Requirements for Technological Claims."</li>
+                            <li class="ref-item"><span class="ref-num">[29]</span> Aaker, D. "Managing Brand Equity: Capitalizing on the Value of a Brand Name."</li>
+                            <li class="ref-item"><span class="ref-num">[30]</span> US Copyright Office Policy Statement. "Copyright Registration Guidance: Works Containing AI-Generated Material."</li>
+                            <li class="ref-item"><span class="ref-num">[31]</span> 17 U.S. Code § 102. "Subject Matter of Copyright: Requirement of Original Works of Authorship."</li>
+                            <li class="ref-item"><span class="ref-num">[32]</span> US Copyright Office Review Board. "Zarya of the Dawn Decision: Human Authorship Thresholds."</li>
+                        </ol>
+                    </div>
+                </section>
+            </article>
+
+        </main>
+
+        <!-- Right Sticky Sidebar -->
+        <aside class="sidebar-wrapper">
+            <nav class="toc-card" aria-label="Table of Contents">
+                <div class="toc-title">Table of Contents</div>
+                <ul class="toc-list">
+                    <li><a href="#section-1" class="toc-link">01. Funnel Matching & Empathy</a></li>
+                    <li><a href="#section-2" class="toc-link">02. Conversational Copy vs Plain Text</a></li>
+                    <li><a href="#section-3" class="toc-link">03. 15s UGC Format & Tool Stack</a></li>
+                    <li><a href="#section-4" class="toc-link">04. Audience & Data Diagnostics</a></li>
+                    <li><a href="#section-5" class="toc-link">05. 3 Pro-Marketer Takeaways</a></li>
+                    <li><a href="#section-6" class="toc-link">06. Discussion & Citations</a></li>
+                </ul>
+
+                <div class="author-box">
+                    <img src="../images/inkwell_avatar.jpg" alt="Padmaja Senthil" class="author-img">
+                    <div class="author-info">
+                        <h4>Padmaja Senthil</h4>
+                        <p>Digital Marketing Learner & Growth Analyst</p>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast-notification">Message copied to clipboard!</div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>© 2026 Padmaja Senthil • My Digital Marketing Journey Case Study Series.</p>
+        <p style="margin-top: 6px; font-size: 0.8rem; color: var(--text-subtle);">Built with clean semantic HTML & CSS • Deployed on Vercel.</p>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Reading Progress Bar
+        window.addEventListener('scroll', () => {
+            const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progress-bar').style.width = scrolled + '%';
+        });
+
+        // Dark/Light Theme Switcher
+        const themeBtn = document.getElementById('theme-toggle');
+        const themeText = document.getElementById('theme-text');
+        const htmlElement = document.documentElement;
+
+        themeBtn.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            htmlElement.setAttribute('data-theme', newTheme);
+            themeText.textContent = newTheme === 'dark' ? 'Light' : 'Dark';
+        });
+
+        // ScrollSpy TOC Highlight
+        const observerOptions = {
+            root: null,
+            rootMargin: '-20% 0px -60% 0px',
+            threshold: 0
+        };
+
+        const tocLinks = document.querySelectorAll('.toc-link');
+        const sections = document.querySelectorAll('section[id]');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    tocLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === '#' + id) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => observer.observe(section));
+
+        // Copy Prompt Script
+        function copyPromptText() {
+            const promptText = document.getElementById('prompt-content').innerText;
+            navigator.clipboard.writeText(promptText).then(() => {
+                showToast("Prompt copied to clipboard!");
+            });
+        }
+
+        // Copy Article Link
+        function copyArticleLink() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                showToast("Article link copied to clipboard!");
+            });
+        }
+
+        // Show Toast
+        function showToast(message) {
+            const toast = document.getElementById('toast-notification');
+            toast.textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // Interactive Ad Animation Controls - Text-Only Ad
+        let isTextAdPlaying = true;
+        const adTextContainer = document.getElementById('ad-text-container');
+        const playPauseTextBtn = document.getElementById('play-pause-text-btn');
+        const textProgressFill = document.getElementById('text-progress-fill');
+
+        function toggleTextAdAnimation() {
+            isTextAdPlaying = !isTextAdPlaying;
+            if (isTextAdPlaying) {
+                adTextContainer.classList.add('playing');
+                playPauseTextBtn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg><span>Pause</span>`;
+                textProgressFill.style.animationPlayState = 'running';
+            } else {
+                adTextContainer.classList.remove('playing');
+                playPauseTextBtn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg><span>Play</span>`;
+                textProgressFill.style.animationPlayState = 'paused';
+            }
+        }
+
+        function restartTextAdAnimation() {
+            adTextContainer.classList.remove('playing');
+            textProgressFill.style.animation = 'none';
+            void textProgressFill.offsetWidth; // Trigger reflow
+            textProgressFill.style.animation = 'progressLoop 6s linear infinite';
+            setTimeout(() => {
+                adTextContainer.classList.add('playing');
+                isTextAdPlaying = true;
+                playPauseTextBtn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg><span>Pause</span>`;
+            }, 50);
+        }
+
+        // Interactive Ad Animation Controls - Human-Face Ad (Gemini)
+        let isHumanAdPlaying = true;
+        const adHumanContainer = document.getElementById('ad-human-container');
+        const playPauseHumanBtn = document.getElementById('play-pause-human-btn');
+        const humanProgressFill = document.getElementById('human-progress-fill');
+
+        function toggleHumanAdAnimation() {
+            isHumanAdPlaying = !isHumanAdPlaying;
+            if (isHumanAdPlaying) {
+                adHumanContainer.classList.add('playing');
+                playPauseHumanBtn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg><span>Pause</span>`;
+                humanProgressFill.style.animationPlayState = 'running';
+            } else {
+                adHumanContainer.classList.remove('playing');
+                playPauseHumanBtn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg><span>Play</span>`;
+                humanProgressFill.style.animationPlayState = 'paused';
+            }
+        }
+
+        function restartHumanAdAnimation() {
+            adHumanContainer.classList.remove('playing');
+            humanProgressFill.style.animation = 'none';
+            void humanProgressFill.offsetWidth; // Trigger reflow
+            humanProgressFill.style.animation = 'progressLoop 6s linear infinite';
+            setTimeout(() => {
+                adHumanContainer.classList.add('playing');
+                isHumanAdPlaying = true;
+                playPauseHumanBtn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg><span>Pause</span>`;
+            }, 50);
+        }
+    </script>
+</body>
+</html>
