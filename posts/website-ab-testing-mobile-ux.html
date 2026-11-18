@@ -746,6 +746,78 @@
             margin-top: auto;
         }
 
+        /* Discussion & Feedback Box */
+        .discussion-box {
+            background: var(--bg-surface);
+            border: 2px dashed var(--border-accent);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin: 48px 0;
+            text-align: center;
+        }
+
+        .discussion-title {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 12px;
+        }
+
+        .discussion-desc {
+            color: var(--text-muted);
+            font-size: 1rem;
+            max-width: 620px;
+            margin: 0 auto 24px;
+        }
+
+        .discussion-btns {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .btn-primary-ink {
+            background: var(--accent-espresso);
+            color: var(--bg-body);
+            padding: 10px 22px;
+            border-radius: 99px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary-ink:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary-ink {
+            background: var(--bg-subtle);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 10px 22px;
+            border-radius: 99px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-secondary-ink:hover {
+            background: var(--bg-card-hover);
+            transform: translateY(-2px);
+        }
+
         /* Modal Lightbox */
         .modal-overlay {
             position: fixed;
@@ -1228,6 +1300,26 @@
                     </div>
                 </section>
 
+                <!-- SECTION 7: DISCUSSION -->
+                <section id="section-7" class="content-section">
+                    <div class="discussion-box">
+                        <span style="font-family: var(--font-script); font-size: 1.5rem; color: var(--accent-terracotta); display: block; margin-bottom: 6px;">Join the Conversation</span>
+                        <h3 class="discussion-title">What’s Your Biggest Mobile UX Pet Peeve?</h3>
+                        <p class="discussion-desc">
+                            Have you ever abandoned a cart because of unexpected checkout fees or broken mobile layouts? I'm constantly learning and always looking to connect with like-minded marketers, designers, and e-commerce founders.
+                        </p>
+                        <div class="discussion-btns">
+                            <a href="https://linkedin.com" target="_blank" rel="noopener" class="btn-primary-ink">
+                                Connect on LinkedIn →
+                            </a>
+                            <button class="btn-secondary-ink" onclick="copyArticleLink()">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                                Share Article Link
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
             </article>
 
             <!-- Article Footer Navigation / Actions -->
@@ -1254,6 +1346,7 @@
                     <li class="toc-item"><a href="#section-4" class="toc-link">04. Checkout Fee Transparency</a></li>
                     <li class="toc-item"><a href="#section-5" class="toc-link">05. 3 Actionable A/B Tests</a></li>
                     <li class="toc-item"><a href="#section-6" class="toc-link">06. Beginner Takeaways</a></li>
+                    <li class="toc-item"><a href="#section-7" class="toc-link">07. Join the Discussion</a></li>
                 </ul>
 
                 <div class="author-box">

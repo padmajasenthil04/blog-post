@@ -853,6 +853,109 @@
             border-color: var(--border-accent);
         }
 
+        /* Discussion & Feedback Box */
+        .discussion-box {
+            background: var(--bg-surface);
+            border: 2px dashed var(--border-accent);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin: 48px 0;
+            text-align: center;
+        }
+
+        .discussion-title {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 12px;
+        }
+
+        .discussion-desc {
+            color: var(--text-muted);
+            font-size: 1rem;
+            max-width: 620px;
+            margin: 0 auto 24px;
+        }
+
+        .discussion-btns {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        .btn-primary-ink {
+            background: var(--accent-espresso);
+            color: var(--bg-body);
+            padding: 10px 22px;
+            border-radius: 99px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-primary-ink:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary-ink {
+            background: var(--bg-subtle);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            padding: 10px 22px;
+            border-radius: 99px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-secondary-ink:hover {
+            background: var(--bg-card-hover);
+            transform: translateY(-2px);
+        }
+
+        .author-box {
+            margin-top: 24px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .author-img {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent-terracotta);
+        }
+
+        .author-info h4 {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin: 0;
+        }
+
+        .author-info p {
+            font-size: 0.78rem;
+            color: var(--text-subtle);
+            margin: 0;
+            line-height: 1.3;
+        }
+
         /* Lightbox Modal */
         .modal-overlay {
             position: fixed;
@@ -1035,14 +1138,14 @@
                     <time>Aug 4, 2026</time>
                 </div>
 
-                <h1 class="article-title">Applied Social Media Strategy: Optimizing Instagram Brand Positioning and Customer Flow for Cafe Rêve Auroville</h1>
+                <h1 class="article-title">From Double-Taps to Foot Traffic: An Instagram Growth Teardown of Cafe Rêve Auroville</h1>
 
                 <p class="article-lead">
-                    In the modern digital landscape, a local business's social media presence functions as much more than an aesthetic showcase—it serves as the interactive digital storefront to their physical location. For vibrant local establishments like <strong>Cafe Rêve Auroville</strong>, social media offers an extraordinary opportunity to convert digital impressions into memorable, real-world foot traffic.
+                    When you run a cozy local cafe, your Instagram profile isn't just a pretty photo grid—it's your digital front door. For a vibrant local spot like <strong>Cafe Rêve Auroville</strong>, social media has one primary job: turning online double-taps into real people walking through the doors for morning coffee, fresh pastries, and community.
                 </p>
 
                 <p>
-                    As a digital marketing student applying academic concepts to real-world scenarios, I developed this <strong>speculative brand case study and social media audit</strong>. Grounded in established industry frameworks—such as <em>Canva’s guide to social media audits</em> and strategic marketing insights from <em>Husson University</em>—this project evaluates the current online footprint and proposes constructive, high-leverage optimizations to elevate brand clarity, streamline the customer journey, and cultivate a loyal local community.
+                    As part of my digital marketing learning journey, I decided to do a deep-dive teardown of Cafe Rêve's online presence. I wanted to look beyond vanity metrics like follower counts and see how a local business can streamline the customer journey, remove friction from their profile, and guide first-time visitors from discovery all the way to an in-person visit.
                 </p>
 
                 <!-- SECTION 1: THE AUDIT -->
@@ -1055,7 +1158,7 @@
                     </div>
 
                     <p>
-                        To evaluate the cafe’s current social media touchpoints objectively and constructively, I utilized a structured audit framework inspired by industry guidelines from <strong>Canva</strong> and <strong>Sprout Social</strong>. This methodology moves beyond surface vanity metrics (like follower count) to evaluate profile completeness, customer experience, and content alignment:
+                        To evaluate the cafe's social media touchpoints constructively, I broke the audit down into four practical focus areas: profile completeness, operational clarity, target positioning, and content flow. Here is what jumped out immediately:
                     </p>
 
                     <!-- Interactive Audit Grid Cards -->
@@ -1126,11 +1229,11 @@
                     </div>
 
                     <p>
-                        Similar to the strategic approach highlighted in the <strong>Husson University case study</strong>, this optimization strategy focuses deeply on the "why" behind the brand's social media presence.
+                        Before jumping into what to post, every good strategy starts with the <strong>"why"</strong>—how does social media fit into the real customer journey?
                     </p>
 
                     <p>
-                        Instead of treating Instagram merely as a broadcast channel for aesthetic media, our strategy repurposes the profile as a functional <strong>marketing funnel</strong>. In local hospitality marketing, the goal of social media is to smoothly guide a user through three key psychological stages:
+                        Instead of treating Instagram merely as a broadcast channel for pretty photos, we can turn the profile into a simple, high-performing <strong>customer journey funnel</strong>. The goal is to smoothly guide someone from discovery to an in-person visit across three stages:
                     </p>
 
                     <!-- Interactive Funnel Stepper -->
@@ -1419,7 +1522,38 @@
                     </p>
                 </section>
 
+                <!-- SECTION 5: DISCUSSION -->
+                <section id="section-5" class="content-section">
+                    <div class="discussion-box">
+                        <span style="font-family: var(--font-script); font-size: 1.5rem; color: var(--accent-terracotta); display: block; margin-bottom: 6px;">Join the Conversation</span>
+                        <h3 class="discussion-title">What’s Your Take on Local Cafe Marketing?</h3>
+                        <p class="discussion-desc">
+                            Have you ever visited a cafe just because of an aesthetic reel, or struggled to find simple details like opening hours? I'm constantly learning and always looking to connect with like-minded marketers, mentors, and local business owners.
+                        </p>
+                        <div class="discussion-btns">
+                            <a href="https://linkedin.com" target="_blank" rel="noopener" class="btn-primary-ink">
+                                Connect on LinkedIn →
+                            </a>
+                            <button class="btn-secondary-ink" onclick="copyArticleLink()">
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                                Share Article Link
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
             </article>
+
+            <!-- Article Footer Navigation / Actions -->
+            <div style="margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--border-color); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+                <a href="../case-studies.html" style="color: var(--accent-terracotta); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 6px;">
+                    ← Back to All Case Studies
+                </a>
+                <button onclick="copyArticleLink()" style="background: var(--bg-subtle); border: 1px solid var(--border-color); color: var(--text-main); padding: 8px 16px; border-radius: var(--radius-sm); cursor: pointer; font-size: 0.9rem; font-weight: 500; display: flex; align-items: center; gap: 6px;">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                    Copy Link
+                </button>
+            </div>
 
         </main>
 
@@ -1449,7 +1583,18 @@
                     <li class="toc-item">
                         <a href="#section-4" class="toc-link">4. The Results: Strategic Metrics</a>
                     </li>
+                    <li class="toc-item">
+                        <a href="#section-5" class="toc-link">5. Join the Discussion</a>
+                    </li>
                 </ul>
+
+                <div class="author-box">
+                    <img src="../images/inkwell_avatar.jpg" alt="Padmaja Senthil" class="author-img">
+                    <div class="author-info">
+                        <h4>Padmaja Senthil</h4>
+                        <p>Digital Marketing Learner & Growth Analyst</p>
+                    </div>
+                </div>
 
                 <div class="sidebar-actions">
                     <button class="action-btn" onclick="copyArticleLink()">
